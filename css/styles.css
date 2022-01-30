@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, sans-serif;
+    font-size: 62.5%;
+}
+
+:root {
+    --primary: #333333;
+    --primary-soft: #33333380;
+    --secondary: #00ACCD;
+    --secondary-dark: #0088a3ff;
+    --font-color: #FFF9FB;
+    --font-color-secondary: #D8D5DB;
+}
+
+a {
+    color: var(--font-color-secondary);
+    text-decoration: none;
+}
+
+/** Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    min-width: 320px;
+    min-height: 50px;
+    /* max-height: 75px; */
+    padding: 0.8rem;
+    background-color: var(--primary);
+    color: var(--font-color);
+}
+.header-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 120px;
+}
+.header-logos div > a > img {
+    width: 100%;
+    height: 100%;
+    min-width: 4rem;
+    max-width: 6rem;
+    min-height: 4rem;
+    max-width: 6rem;
+}
+.header-title {
+    padding: 0.4rem;
+    min-width: 140px;
+}
+.header-title h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.header-menu .header-menu__icon {
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-image: url('/img/icons/32/menu.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    filter: invert(80%);
+}
+/* Contenido principal */
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    min-width: 320px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    background-color: var(--primary);
+}
+main > section {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.mural-section.short {
+    padding: 0.2rem 0.8rem;
+    width: 100%;
+    height: 20px;
+    font-size: 1.2rem;
+    background-color: var(--secondary);
+}
+.mural-section.short.inactive {
+    display: none;
+}
+.mural-section.short > span {
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 0.8rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-image: url("/img/icons/32/down.svg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.5;
+        top: -100%;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+     }
+}
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        top: 0;
+    }
+    100% {
+        opacity: 0;
+        top: -100%;
+     }
+}
+.fade--in {
+    animation-name: fadeInAnimation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.fade--out {
+    animation-name: fadeOutAnimation;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.mural-section.long {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    height: 80vh;
+    background: linear-gradient(to bottom, var(--secondary) 40%, var(--primary) 75%);
+    z-index: 4;
+}
+.mural-section.long.inactive {
+    display: none;
+}
+.mural-section__title {
+    width: 90%;
+}
+.mural-section__title > span {
+    display: inline-block;
+    position: absolute;
+    margin: 1rem;
+    top: 0;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("/img/icons/32/close.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mural-section__location-image{
+    align-self: center;
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    min-height: 200px;
+    max-height: 300px;
+    max-width: 450px;
+}
+.mural-section__credits {
+    font-size: 1.1rem;
+    color: var(--font-color-secondary);
+}
+.mural-image,
+.mural-draw {
+    width: 100vw;
+    height: calc(80vh - 20px);
+    min-width: 320px;
+    background-color: var(--primary);
+    z-index: 3;
+}
+.mural-image.inactive,
+.mural-draw.inactive {
+    display: none;
+}
+/* Pie de página */
+.footer {
+    width: 100vw;
+    height: 10vh;
+    min-width: 320px;
+    padding: 0.4rem;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    color: var(--font-color-secondary);
+    background-color: var(--primary);
+}
+
+.footer p {
+    display: inline;
+}
+
+@media screen and (orientation: landscape) {
+    header {
+        min-height: 10vh;
+    }
+
+    .header-logos div > a > img {
+        width: 50%;
+        height: 50%;
+        min-width: 3rem;
+        min-height: 3rem;
+        max-width: 4rem;
+        max-height: 4rem;
+    }
+    main {
+        flex-direction: row;
+    }
+    main > section {
+        position: static;
+        width: fit-content;
+        height: 100%;
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0.5;
+            left: -100%;
+        }
+        100% {
+            opacity: 1;
+            left: 0;
+         }
+    }
+    @keyframes fadeOutAnimation {
+        0% {
+            position: absolute;
+            opacity: 1;
+            top: 0;
+            left: 0;
+        }
+        100% {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: -100%;
+         }
+    }
+    .mural-section.short {
+        padding: 0.2rem 0.4rem 2rem 0.4rem;
+        height: 100%;
+        width: 20px;
+        font-size: 1.2rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        text-align: right;
+    }
+    .mural-section.short > span {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        margin: 4px;
+        transform: rotate(90deg);
+    }
+    .mural-section.long {
+        position: relative;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%;
+        background: linear-gradient(to bottom, var(--secondary) 70%, var(--primary) 85%);
+    }
+    .mural-section__title {
+        grid-column-start: 1;
+    }
+    .mural-section__description {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    .mural-section__credits {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .mural-section__location-image {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+    .mural-image,
+    .mural-draw {
+        width: calc(100vw - 20px);;
+        height: 100%;
+        min-width: 320px;
+        background-color: var(--primary);
+        z-index: 3;
+    }
+}
