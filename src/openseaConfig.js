@@ -1,7 +1,7 @@
 
 let openSeaDragonType = "zoomifytileservice"; 
 
-const prefixURLIcons = "../img/icons/32/"; 
+const prefixURLIcons = "img/icons/32/"; 
 const navIcons = {
     zoomIn: {
         REST:   'zoom_in.svg',
@@ -37,7 +37,7 @@ let originalImage = OpenSeadragon({
         type:       openSeaDragonType,
         width:      13416,
         height:     1949,
-        tilesUrl:   "../img/tiles/Batalla_ote150-gris/"
+        tilesUrl:   "img/tiles/Batalla_ote150-gris/"
     }]
 });
 
@@ -49,6 +49,6 @@ let drawImage = OpenSeadragon({
         type:       openSeaDragonType,
         width:      14427,
         height:     1949,
-        tilesUrl:   "../img/tiles/Batalla_ote150/"
+        tilesUrl:   "img/tiles/Batalla_ote150/"
     }]
 });
