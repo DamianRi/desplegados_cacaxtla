@@ -37,7 +37,7 @@ let originalImage = OpenSeadragon({
         type:       openSeaDragonType,
         width:      13416,
         height:     1949,
-        tilesUrl:   "img/tiles/Batalla_ote150-gris/"
+        tilesUrl:   "img/tiles/1_150_photo/"
     }]
 });
 
@@ -48,7 +48,7 @@ let drawImage = OpenSeadragon({
     tileSources: [{
         type:       openSeaDragonType,
         width:      14427,
-        height:     1949,
-        tilesUrl:   "img/tiles/Batalla_ote150/"
+        height:     2019,
+        tilesUrl:   "img/tiles/1_150_draw/"
     }]
 });
