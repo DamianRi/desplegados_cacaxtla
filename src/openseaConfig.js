@@ -26,6 +26,18 @@ const navIcons = {
         GROUP:  'expand.svg',
         HOVER:  'expand_hover.svg',
         DOWN:   'expand_pressed.svg'
+    },
+    previous: {
+        REST:   'swap_to_color.svg',
+        GROUP:  'swap_to_color.svg',
+        HOVER:  'swap_to_color_hover.svg',
+        DOWN:   'swap_to_color_pressed.svg'
+    },
+    next: {
+        REST:   'swap_to_line.svg',
+        GROUP:  'swap_to_line.svg',
+        HOVER:  'swap_to_line_hover.svg',
+        DOWN:   'swap_to_line_pressed.svg'
     }
 }
 
@@ -33,22 +45,23 @@ let originalImage = OpenSeadragon({
     id: "mural-image",
     prefixUrl: prefixURLIcons,
     navImages: navIcons,
-    tileSources: [{
-        type:       openSeaDragonType,
-        width:      13416,
-        height:     1949,
-        tilesUrl:   "img/tiles/1_150_photo/"
-    }]
-});
-
-let drawImage = OpenSeadragon({
-    id: "mural-draw",
-    prefixUrl: prefixURLIcons,
-    navImages: navIcons,
-    tileSources: [{
-        type:       openSeaDragonType,
-        width:      14427,
-        height:     2019,
-        tilesUrl:   "img/tiles/1_150_draw/"
-    }]
+    tileSources: [
+        {
+            type:       openSeaDragonType,
+            width:      13416,
+            height:     1949,
+            tilesUrl:   "img/tiles/1_150_photo/"
+        },
+        {
+            type:       openSeaDragonType,
+            width:      14427,
+            height:     2019,
+            tilesUrl:   "img/tiles/1_150_draw/"
+        }
+    ],
+    showNavigator: true,
+    navigatorPosition: 'TOP_RIGHT',
+    toolbar: 'mural-toolbar',
+    sequenceMode: true,
+    preserveViewport: true
 });

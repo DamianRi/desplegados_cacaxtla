@@ -11270,12 +11270,12 @@ var I18N = {
     },
 
     Tooltips: {
-        FullPage:       "Toggle full page",
-        Home:           "Go home",
-        ZoomIn:         "Zoom in",
-        ZoomOut:        "Zoom out",
-        NextPage:       "Next page",
-        PreviousPage:   "Previous page",
+        FullPage:       "Pantalla completa",
+        Home:           "Centrar",
+        ZoomIn:         "Acercar",
+        ZoomOut:        "Alejar",
+        NextPage:       "Cambiar a dibujo",
+        PreviousPage:   "Cambiar a fotografía",
         RotateLeft:     "Rotate left",
         RotateRight:    "Rotate right",
         Flip:           "Flip Horizontally"

@@ -197,6 +197,41 @@ main > .mural-info {
     font-size: 1rem;
     color: var(--font-color-secondary);
 }
+/* Override toolbar styles with important property due to
+styles were write inline */
+div#mural-toolbar {
+    position: absolute !important;
+    margin: 1rem;
+    bottom: 0;
+    right: 0;
+    width: 72px;
+    height: 128px;
+    z-index: 3;
+}
+div#mural-toolbar.mural-toolbar>div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+div#mural-toolbar.mural-toolbar>div>div:nth-child(1)>div>div {
+    display: flex !important;
+    flex-direction: column-reverse;
+}
+div#mural-toolbar.mural-toolbar>div>div:nth-child(1)>div>div>div {
+    display: block !important;
+}
+div#mural-toolbar.mural-toolbar>div>div:nth-child(3)>div>div {
+    display: flex !important;
+    flex-direction: column;
+}
+div#mural-toolbar.mural-toolbar>div>div:nth-child(3)>div>div>div {
+    display: block !important;
+}
+div#mural-toolbar.mural-toolbar>div>div {
+    position: relative !important;
+}
+/* Mural styles */
 .mural-image,
 .mural-draw {
     position: absolute;
@@ -205,7 +240,11 @@ main > .mural-info {
     height: var(--height-portrait-mural);
     min-width: 320px;
     background-color: var(--primary);
-    z-index: 3;
+    z-index: 2;
+}
+.mural-image.fullpage,
+.mural-draw.fullpage {
+    top: 0;
 }
 .mural-image.inactive,
 .mural-draw.inactive {
@@ -326,7 +365,11 @@ footer p {
         width: var(--height-portrait-mural);
         height: 100%;
         min-width: 320px;
-        z-index: 3;
+        z-index: 2;
+    }
+    .mural-image.fullpage,
+    .mural-draw.fullpage {
+        left: 0;
     }
     footer {
         min-height: 10vh;
