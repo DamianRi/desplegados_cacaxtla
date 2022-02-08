@@ -148,25 +148,26 @@ main > .mural-info {
     position: relative;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 45% 35% 10%;
+    grid-template-rows: fit-content(50px) fit-content(45%) fit-content(35%) auto;
     font-size: 1.2rem;
-    padding: 2rem;
     height: 80vh;
-    background: linear-gradient(var(--secondary) 55%, var(--white) 55%, var(--white) 88%, var(--primary) 88%);
+    background-color: var(--secondary);
     z-index: 4;
 }
 .mural-section.long.inactive {
     display: none;
 }
 .mural-section__title {
+    padding: 2rem 0 0 2rem;
     width: 90%;
+    background-color: var(--secondary);
 }
 .mural-section__title h2 {
-    display: inline;
+    display: inline-block;
     font-size: 1.4rem;
 }
 .mural-section__title p {
-    display: inline;
+    display: inline-block;
 }
 .mural-section__title > span {
     display: inline-block;
@@ -182,20 +183,28 @@ main > .mural-info {
     background-repeat: no-repeat;
 }
 .mural-section__description {
-    padding: 0 0 0 0;
+    padding: 0.8rem 2rem 1.5rem 2rem;
 }
 /* Tamaño de las imágenes de 450px x 258px */
 .mural-section__location-image {
+    width: 100%;
+    height: fit-content;
+    padding: 0.8rem 2rem;
+    background-color: var(--white);
+}
+.mural-section__location-image > img {
+    display: block;
     margin: auto;
-    height: 85%;
+    width: 85%;
     max-width: 450px;
     min-width: 200px;
     max-height: 258px;
 }
 .mural-section__credits {
-    padding: 0.8rem 0 0 0;
+    padding: 0.4rem 2rem 0 2rem;
     font-size: 1rem;
     color: var(--font-color-secondary);
+    background-color: var(--primary);
 }
 /* Override toolbar styles with important property due to
 styles were write inline */
@@ -204,13 +213,13 @@ div#mural-toolbar {
     margin: 1rem;
     bottom: 0;
     right: 0;
-    width: 72px;
-    height: 128px;
+    width: 32px;
+    height: 204px;
     z-index: 3;
 }
 div#mural-toolbar.mural-toolbar>div {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: flex-end;
 }
@@ -253,9 +262,9 @@ div#mural-toolbar.mural-toolbar>div>div {
 /* Pie de página */
 footer {
     width: 100vw;
-    height: 10vh;
+    height: fit-content;
     min-width: 320px;
-    min-height: 60px;
+    min-height: 10vh;
     padding: 0.4rem;
     text-align: center;
     font-weight: lighter;
@@ -330,25 +339,33 @@ footer p {
     .mural-section.long {
         position: absolute;
         top: 0;
-        padding: 2rem;
         width: 100vw;
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 18% 57% 25%;
+        grid-template-rows: fit-content(18%) auto fit-content(25%);
         background: linear-gradient(to right, var(--secondary) 50%, var(--white) 50%);
+    }
+    .mural-section__title {
+        width: 100%;
+        padding: 2rem 2rem 0 2rem;
+    }
+    .mural-section__title > h2,
+    .mural-section__title > p {
+        display: inline;
     }
     .mural-section__description {
         grid-column-start: 1;
         grid-row-start: 2;
         grid-row-end: 4;
-        padding: 0 2rem 0 0;
+        padding: 0.8rem 2rem 0 2rem;
     }
     .mural-section__credits {
         grid-column-start: 2;
         grid-row-start: 3;
         grid-row-end: 4;
-        padding: 0 0 0 2rem;
+        padding: 2rem 2rem;
         color: var(--black);
+        background-color: var(--white);
     }
     .mural-section__location-image {
         grid-column-start: 2;
@@ -356,7 +373,6 @@ footer p {
         grid-row-end: 3;
         height: 85%;
         margin: auto;
-
     }
     .mural-image,
     .mural-draw {
@@ -371,15 +387,12 @@ footer p {
     .mural-draw.fullpage {
         left: 0;
     }
-    footer {
-        min-height: 10vh;
-    }
 }
 
 @media screen and (orientation: portrait) and (max-height: 568px) {
     header {
         height: 8vh;
-        min-height: auto;
+        min-height: fit-content;
     }
     .header-logos {
         justify-content: left;
@@ -398,12 +411,10 @@ footer p {
     }
     .mural-section.long {
         height: 84vh;
-        padding: 1.2rem;
-        grid-template-rows: 8% 50% 34% 8%;
-        background: linear-gradient(var(--secondary) 58%, var(--white) 58%, var(--white) 90%, var(--primary) 90%);
+        grid-template-rows: fit-content(35px) fit-content(50%) fit-content(34%) auto;
     }
     .mural-section__title h2 {
-        display: inline;
+        display: inline-block;
         font-size: 1.2rem;
     }
     .mural-section__title p {
@@ -425,7 +436,7 @@ footer p {
     }
     footer {
         height: 8vh;
-        min-height: auto;
+        min-height: fit-content;
         font-size: 0.6rem;
     }
 }
@@ -434,6 +445,9 @@ footer p {
     .mural-section.long {
         padding: 1rem;
         grid-template-rows: 15% 50% 35%;
+    }
+    .mural-section__title {
+        padding: 0 1rem 0 0;
     }
     .mural-section__title h2 {
         font-size: 1.2rem;
@@ -444,6 +458,9 @@ footer p {
     .mural-section__description {
         padding: 0 1rem 0 0;
         font-size: 1rem;
+    }
+    .mural-section__credits {
+        padding: 1rem 0 0 1rem;
     }
     footer {
         font-size: 0.6rem;
