@@ -1,27 +1,34 @@
+
+/**
+ * Active or inactive the short section.
+ */
 function manageMuralSectionShort() {
     const muralSectionShort = document.getElementById("mural-section-short");
-    let sectionShortClases = muralSectionShort.classList;
+    let sectionShortClasses = muralSectionShort.classList;
     // If section is inactive we want activate it
-    if (sectionShortClases.contains("inactive")) {
-        sectionShortClases.remove("inactive");
+    if (sectionShortClasses.contains("inactive")) {
+        sectionShortClasses.remove("inactive");
     } else { // Hide section
-        sectionShortClases.add('inactive');
+        sectionShortClasses.add('inactive');
         manageMuralSectionLong();
     }
 }
 
+/**
+ * Active or inactive the long section and adds the fade effect by a class.
+ */
 function manageMuralSectionLong() {
     const muralSectionLong = document.getElementById("mural-section-long");
-    let sectionLongClases = muralSectionLong.classList;
+    let sectionLongClasses = muralSectionLong.classList;
     // If section is inactive we want activate it
-    if (sectionLongClases.contains("inactive")) {
-        sectionLongClases.remove('inactive', 'fade--out');
-        sectionLongClases.add('fade--in');
+    if (sectionLongClasses.contains("inactive")) {
+        sectionLongClasses.remove('inactive', 'fade--out');
+        sectionLongClasses.add('fade--in');
     } else { // Hide section after fadeOut effect
-        sectionLongClases.remove('fade--in');
-        sectionLongClases.add('fade--out');
+        sectionLongClasses.remove('fade--in');
+        sectionLongClasses.add('fade--out');
         setTimeout(function () {
-            sectionLongClases.add('inactive');
+            sectionLongClasses.add('inactive');
         }, 300);
         manageMuralSectionShort();
     }

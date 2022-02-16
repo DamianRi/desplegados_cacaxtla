@@ -5,17 +5,19 @@
 header {
     min-height: 65px;
 }
+.header-logos {
+    min-width: 180px;
+}
 .header-logos > div {
     width: 6rem;
     height: 6rem;
 }
-
 .header-menu .header-menu__icon {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
 }
 .header-title {
-    width: 600px;
+    width: 100%;
     padding: 1rem;
 }
 .header-title > h1 {
@@ -53,6 +55,12 @@ header {
 .mural-section__description {
     font-size: 1.3rem;
     margin: 0 0 2rem 0;
+}
+.mural-section__location-image > picture {
+    width: 50%;
+}
+.mural-section__location-image > picture > img {
+    width: auto;
 }
 .mural-section__credits {
     font-size: 1.1rem;

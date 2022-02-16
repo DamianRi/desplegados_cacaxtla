@@ -1,0 +1,64 @@
+.header-logos {
+    min-width: fit-content;
+}
+.header-logos > div:last-child {
+    width: auto;
+    height: 5.5rem;
+}
+.header-logos div > a > picture > img {
+    width: 100%;
+}
+main {
+    display: flex;
+}
+main > .mural-info {
+    display: flex;
+    position: relative;
+    width: fit-content;
+}
+.mural-section.long {
+    position: relative;
+    width: 60vw;
+    height: 80vh;
+    max-width: 800px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(5, 1fr);
+    background: linear-gradient(to right, var(--secondary) 40%, var(--white) 40%);
+}
+.mural-section__title {
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.mural-section__description {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+.mural-section__location-image{
+    padding: 0.5rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.mural-section__location-image > picture {
+    width: fit-content;
+    margin: auto;
+}
+.mural-section__location-image > picture > img {
+    width: 100%;
+}
+.mural-section__credits{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.mural-image {
+    position: relative;
+    left: 0;
+}
