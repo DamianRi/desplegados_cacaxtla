@@ -43,8 +43,6 @@
 .main-menu__item > p:first-child {
     text-align: center;
     margin: 0.4rem 0.8rem;
-    /* display: inline-block;
-    margin: 0.4rem 0.75rem; */
 }
 .main-menu__item > p:last-child {
     width: 100%;
@@ -110,4 +108,37 @@
         word-spacing: 0;
         transition-duration: 0.5s;
     }
+}
+@media screen and (min-width: 992px) {
+    .welcome {
+        font-size: 1.6rem;
+    }
+    .main-menu > picture > img {
+        width: 100%;
+        max-width: 750px;
+        object-fit: contain;
+    }
+    .main-menu__item.item-1 {
+        top: 19%;
+        left: 33%;
+    }
+    .main-menu__item.item-2 {
+        top: 41%;
+        left: 53.5%;
+    }
+    .main-menu__item.item-3 {
+        top: 61%;
+        left: 50.5%;
+    }
+    .main-menu__item.item-4 {
+        top: 7%;
+        left: 41%;
+    }
+    .main-menu__item:hover {
+        width: 240px;
+        left: calc(50% - 120px);
+        text-align: center;
+        word-spacing: 0;
+        transition-duration: 0.5s;
+    }    
 }
