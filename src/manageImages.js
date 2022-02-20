@@ -1,6 +1,6 @@
 // Configurations to use the openseadragon
 const openSeaDragonType = "zoomifytileservice"; 
-const prefixURLIcons = "img/icons/32/"; 
+const prefixURLIcons = "/img/icons/32/"; 
 const navIcons = {
     zoomIn: {
         REST:   'zoom_in.svg',
@@ -45,13 +45,13 @@ let tiles = [
         type:       openSeaDragonType,
         width:      12846,
         height:     2019,
-        tilesUrl:   "img/tiles/1-1_150_photo/"
+        tilesUrl:   "/img/tiles/1-1_150_photo/"
     },
     { // draw
         type:       openSeaDragonType,
         width:      12846,
         height:     2019,
-        tilesUrl:   "img/tiles/1-1_150_draw/"
+        tilesUrl:   "/img/tiles/1-1_150_draw/"
     }
 ]
 

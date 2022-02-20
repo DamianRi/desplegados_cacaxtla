@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desplegados del catálogo de cacaxtla</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/tablet.css" media="only screen and (min-width: 768px) and (min-height: 768px)">
-    <link rel="stylesheet" href="./css/desktop.css" media="only screen and (min-width: 992px)">
+    <title>Inicio | Desplegados del catálogo de cacaxtla</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/main-menu.css">
+    <link rel="stylesheet" href="/css/tablet.css" media="only screen and (min-width: 600px) and (min-height: 600px)">
+    <link rel="stylesheet" href="/css/desktop.css" media="only screen and (min-width: 992px)">
 </head>
 <body>
     <header>
         <div class="header-logos">
             <div class="unam">
                 <a href="https://www.unam.mx/" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/logos/unam_logo.png" alt="Logo Universidad Nacional Autónoma de México" title="Universidad Nacional Autónoma de México">
+                    <img src="./img/logos/logo_unam.png" alt="Logo Universidad Nacional Autónoma de México" title="Universidad Nacional Autónoma de México">
                 </a>
             </div>
             <div class="esteticas">
                 <a href="http://www.esteticas.unam.mx/" target="_blank" rel="noopener noreferrer">
-                    <img src="./img/logos/esteticas_logo.png" alt="Logo Instituto de investigaciones estéticas" title="Instituto de investigaciones estéticas">
+                    <img src="./img/logos/logo_esteticas.png" alt="Logo Instituto de investigaciones estéticas" title="Instituto de investigaciones estéticas">
                 </a>
             </div>
             <div class="murales">
@@ -41,61 +42,39 @@
         </div>
     </header>
     <main>
-        <section class="mural-info">
-            <div id="mural-section-short" class="mural-section short" onclick="manageMuralSectionShort()">
-                <p>Mural poniente, escalera del Templo Rojo</p>
-                <span></span>
+        <!-- Sección relacionada con el menú interactivo -->
+        <p class="welcome">Bienvenido al complemento digital de los murales del catálogo de cacaxtla.</p>
+        <section class="main-menu">
+            <picture>
+                <source media="(min-width: 768px)" srcset="/img/isometricos/menu_iso.jpg">
+                <img src="/img/isometricos/menu_iso.jpg" alt="Isometrico de las ubicaciones">
+            <div class="main-menu__item item-1">
+                <p>1. Murales más corto</p>
+                <p>Ver ></p>
             </div>
-            <div id="mural-section-long" class="mural-section long inactive">
-                <div class="mural-section__title">
-                    <h2>Mural poniente, escalera del Templo Rojo</h2>
-                    <p>Muro oriente</p>
-                    <span id="close-section" onclick="manageMuralSectionLong()"></span>
-                </div>
-                <div class="mural-section__description justify-text">
-                    <p>
-                        <!-- El muro oriente del mural de La Batalla fue el primero en ser descubierto, en 1976, cuando los arqueólogos Diana López de Molina y Daniel Molina realizaban calas para conocer la estructura sobre la que se encontraba el Edificio B. -->
-                        En 1975 un pozo de saqueo condujo al descubrimiento de la pintura mural en el muro sur de este edificio; a partir de este hecho, entre 1975 y 1976 los arqueólogos Diana López de Molina y Daniel Molina trabajaron en la liberación de los muros norte y sur y de sus respectivas jambas.
-                    </p>
-                    <!-- Habrán textos en los cuales se deberá ingresar un salto de línea para el despliegue de información -->
-                    <br>
-                    <p>
-                        <!-- El talud mide 12.84 × 1.58 m y está prácticamente cubierto por el mural, la pintura abarca 11.67 × 1.58 m. Se han registrado 27 personajes en esta sección. -->
-                        El mural norte tiene una longitud de 1.75 m (de los cuales 46 cm corresponden al relieve de barro) y una altura máxima de 1.72 m; la jamba norte mide 63 cm de ancho y su altura máxima es de 1.33 m. El mural sur mide 2.21 m de longitud y su altura máxima es de 1.76 m, mientras que la jamba sur mide 63 cm de ancho y tiene una altura máxima de 1.36 m.
-                    </p>
-                </div>
-                <div class="mural-section__location-image">
-                    <picture>
-                        <!-- Se deberá cargar dinámicamente la fuente a considerar según el mural cargado -->
-                        <source media="(min-width: 768px)" srcset="img/isometricos/desktop/Batalla_ote_iso_desktop.jpg">
-                        <img src="img/isometricos/mobile/Batalla_ote_iso_mobile.jpg" alt="Isométrico del mural"/>
-                    </picture>
-                </div>
-                <div class="mural-section__credits">
-                    <p class="justify-text">
-                        Gráfico del muro oriente del mural de La Batalla.
-                        (Ilustración: I. Hernández con apoyo de V. Godoy, 2018.
-                        Fotos: R. Alvarado y M. J. Chávez, 2010.
-                        Ensamble digital: R. Alvarado y P. Peña, 2010.)
-    
-                        <!-- Gráfico de los murales en el pórtico del Edificio A.
-                        (Ilustración: I. Hernández con apoyo de V. Godoy, 2018.
-                        Foto: R. Alvarado, P. Peña y M. J. Chávez, 2010.
-                        Ensamble digital: M. J. Chávez, 2018.) -->
-                    </p>
-                </div>
+            <div class="main-menu__item item-2">
+                <p>2. Murales con nombre largo</p>
+                <p>Ver ></p>
             </div>
+            <div class="main-menu__item item-3">
+                <p>3. Murales número 3</p>
+                <p>Ver ></p>
+            </div>
+            <div class="main-menu__item item-4">
+                <p>4. Murales número 4</p>
+                <p>Ver ></p>
+            </div>
+            </picture>
         </section>
-        <div id="mural-toolbar" class="mural-toolbar"></div>
-        <section id="mural-image" class="mural-image"></section>
+        <!-- Revisar si podemos poner los items del menú en los costados de forma dinámica -->
     </main>
     <footer>
         <p>© 2022 Universidad Nacional Autónoma de México. Proyecto La pintura mural prehispánica en México. Imágenes: Acervo del proyecto La pintura mural prehispánica en México. Reproducción autorizada por el Instituto Nacional de Antropología e Historia.
             Sitio web administrado por: Instituto de Investigaciones Estéticas, iieweb@unam.mx Última actualización 09/09/2022.</p>
         <a href="">Créditos</a>
     </footer>
-    <script src="./src/openseadragon/openseadragon.js"></script>
-    <script src="./src/manageImages.js"></script>
-    <script src="./src/interactions.js"></script>
+    <script src="/src/openseadragon/openseadragon.js"></script>
+    <script src="/src/manageImages.js"></script>
+    <script src="/src/interactions.js"></script>
 </body>
 </html>

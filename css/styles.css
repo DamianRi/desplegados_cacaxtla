@@ -45,25 +45,17 @@ header {
 }
 .header-logos {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    min-width: 120px;
-}
-.header-logos > div {
-    width: 4rem;
+    width: fit-content;
     height: 4rem;
 }
-.header-logos div > a > img {
-    width: 100%;
-    height: 100%;
-}
+.header-logos div > a > img,
 .header-logos div > a > picture > img {
     width: 100%;
-    height: 100%;
 }
 .header-title {
     padding: 0.4rem;
-    min-width: 140px;
+    width: 100%;
 }
 .header-title h1 {
     font-size: 1.6rem;
@@ -73,7 +65,7 @@ header {
     display: inline-block;
     width: 4rem;
     height: 4rem;
-    background-image: url('/desplegados_cacaxtla/img/icons/32/menu.svg');
+    background-image: url('/img/icons/32/menu.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -88,195 +80,6 @@ main {
     min-height: 420px;
     min-width: 320px;
     background-color: var(--primary);
-}
-main > .mural-info {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-.mural-section.short {
-    position: relative;
-    padding: 0.2rem 0.8rem;
-    width: 100%;
-    height: var(--mural-section-short);
-    min-height: var(--mural-section-short);
-    font-size: 1.2rem;
-    background-color: var(--secondary);
-}
-.mural-section.short.inactive {
-    display: none;
-}
-.mural-section.short > span {
-    display: inline-block;
-    position: absolute;
-    top: 2px;
-    right: 0.8rem;
-    width: 1.4rem;
-    height: 1.4rem;
-    background-image: url("/desplegados_cacaxtla/img/icons/32/down.svg");
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-        top: -50vh;
-    }
-    100% {
-        opacity: 1;
-        top: 0;
-     }
-}
-@keyframes fadeOutAnimation {
-    0% {
-        opacity: 1;
-        top: 0;
-    }
-    100% {
-        opacity: 0;
-        top: -50vh;
-     }
-}
-.fade--in {
-    animation-name: fadeInAnimation;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-}
-.fade--out {
-    animation-name: fadeOutAnimation;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-}
-
-.mural-section.long {
-    position: relative;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: fit-content(50px) fit-content(45%) fit-content(35%) auto;
-    font-size: 1.2rem;
-    height: 90vh;
-    min-height: 420px;
-    background-color: var(--secondary);
-    z-index: 4;
-}
-.mural-section.long.inactive {
-    display: none;
-}
-.mural-section__title {
-    padding: 2rem 0 0 2rem;
-    width: 90%;
-    background-color: var(--secondary);
-}
-.mural-section__title h2 {
-    display: inline-block;
-    font-size: 1.4rem;
-}
-.mural-section__title p {
-    display: inline-block;
-}
-.mural-section__title > span {
-    display: inline-block;
-    position: absolute;
-    margin: 2rem;
-    top: 0;
-    right: 0;
-    width: 2.4rem;
-    height: 2.4rem;
-    background-image: url("/desplegados_cacaxtla/img/icons/32/close.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.mural-section__description {
-    padding: 0.8rem 2rem 1.5rem 2rem;
-}
-/* Tamaño de las imágenes de 450px x 258px */
-.mural-section__location-image {
-    width: 100%;
-    height: fit-content;
-    padding: 0.8rem 2rem;
-    background-color: var(--white);
-}
-.mural-section__location-image > picture {
-    display: block;
-    margin: auto;
-    width: 100%;
-}
-.mural-section__location-image > picture > img {
-    width: 100%;
-    min-width: 200px;
-    max-width: 450px;
-    min-height: 115px;
-    max-height: 258px;
-}
-.mural-section__credits {
-    padding: 0.4rem 2rem 2rem 2rem;
-    font-size: 1rem;
-    color: var(--font-color-secondary);
-    background-color: var(--primary);
-}
-/* Override toolbar styles with important property due to
-styles were write inline */
-div#mural-toolbar {
-    position: absolute !important;
-    margin: 1rem;
-    bottom: 0;
-    right: 0;
-    width: 32px;
-    height: 204px;
-    z-index: 3;
-}
-div#mural-toolbar.mural-toolbar>div {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-div#mural-toolbar.mural-toolbar>div img {
-    width: 3.2rem;
-    height: 3.2rem;
-}
-div#mural-toolbar.mural-toolbar>div>div:nth-child(1)>div>div {
-    display: flex !important;
-    flex-direction: column-reverse;
-}
-div#mural-toolbar.mural-toolbar>div>div:nth-child(1)>div>div>div {
-    display: block !important;
-}
-div#mural-toolbar.mural-toolbar>div>div:nth-child(3)>div>div {
-    display: flex !important;
-    flex-direction: column;
-}
-div#mural-toolbar.mural-toolbar>div>div:nth-child(3)>div>div>div {
-    display: block !important;
-}
-div#mural-toolbar.mural-toolbar>div>div {
-    position: relative !important;
-}
-/* Mural styles */
-.mural-image,
-.mural-draw {
-    position: absolute;
-    top: var(--mural-section-short);
-    width: 100vw;
-    height: var(--height-portrait-mural);
-    min-width: 320px;
-    background-color: var(--primary);
-    z-index: 2;
-}
-.mural-image.fullpage,
-.mural-draw.fullpage {
-    top: 0;
-    left: 0;
-    width: 100vw !important;
-    height: 100vh !important;
-}
-.mural-image.inactive,
-.mural-draw.inactive {
-    display: none;
 }
 /* Pie de página */
 footer {
@@ -295,13 +98,10 @@ footer {
 footer p {
     display: inline;
 }
-
-@media screen and (orientation: landscape) and (max-height: 768px) {
+/* Para móviles de forma :horizontal */
+@media screen and (orientation: landscape) and (max-height: 600px) {
     header {
         min-height: 35px;
-    }
-    .header-logos {
-        min-width: 90px;
     }
     .header-logos > div {
         width: 3rem;
@@ -313,94 +113,6 @@ footer p {
     }
     main {
         min-height: 250px;
-    }
-    main > .mural-info {
-        width: auto;
-        height: 100%;
-        top: 0;
-        left: 0;
-    }
-    @keyframes fadeInAnimation {
-        0% {
-            opacity: 0;
-            left: -50vw;
-        }
-        100% {
-            opacity: 1;
-            left: 0;
-         }
-    }
-    @keyframes fadeOutAnimation {
-        0% {
-            opacity: 1;
-            left: 0;
-        }
-        100% {
-            opacity: 0;
-            left: -50vw;
-         }
-    }
-    .mural-section.short {
-        padding: 0.2rem 0.4rem 2rem 0.4rem;
-        height: 100%;
-        width: var(--mural-section-short);
-        font-size: 1.2rem;
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        text-align: right;
-    }
-    .mural-section.short > span {
-        top: auto;
-        right: 0;
-        bottom: 0;
-        margin: 4px;
-        transform: rotate(90deg);
-    }
-    .mural-section.long {
-        position: absolute;
-        top: 0;
-        width: 100vw;
-        height: fit-content;
-        min-height: 90vh;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: fit-content(30px) auto fit-content(18%);
-        background: linear-gradient(to right, var(--secondary) 50%, var(--white) 50%);
-    }
-    .mural-section__title {
-        padding: 2rem 2rem 1rem 2rem;
-        width: 100%;
-    }
-    .mural-section__description {
-        grid-column-start: 1;
-        grid-row-start: 2;
-        grid-row-end: 4;
-    }
-    .mural-section__credits {
-        grid-column-start: 2;
-        grid-row-start: 3;
-        padding: 2rem 2rem;
-        color: var(--black);
-        background-color: var(--white);
-    }
-    .mural-section__location-image {
-        grid-column-start: 2;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        margin: auto;
-    }
-    .mural-image,
-    .mural-draw {
-        top: 0;
-        left: var(--mural-section-short);
-        width: var(--height-portrait-mural);
-        height: 100%;
-        min-width: 320px;
-        z-index: 2;
-    }
-    .mural-image.fullpage,
-    .mural-draw.fullpage {
-        left: 0;
     }
     footer {
         padding: 0.2rem;
