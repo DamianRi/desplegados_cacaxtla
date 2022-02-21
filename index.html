@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="header-title">
-            <h1>Desplegados del Catálogo de Cacaxtla</h1>
+            <h1 onclick="redirectToHome()">Desplegados del Catálogo de Cacaxtla</h1>
         </div>
         <div class="header-menu">
             <span class="header-menu__icon"></span>
@@ -48,21 +48,25 @@
             <picture>
                 <source media="(min-width: 768px)" srcset="./img/isometricos/menu_iso.jpg">
                 <img src="./img/isometricos/menu_iso.jpg" alt="Isometrico de las ubicaciones">
-            <div class="main-menu__item item-1">
+            <div id="menu-item-1" class="main-menu__item item-1"
+                onclick="manageMenuItem(this)">
                 <p>1. Murales más corto</p>
-                <p>Ver ></p>
+                <p onclick="redirectToMurals()">Ver ></p>
             </div>
-            <div class="main-menu__item item-2">
+            <div id="menu-item-2" class="main-menu__item item-2"
+                onclick="manageMenuItem(this)">
                 <p>2. Murales con nombre largo</p>
-                <p>Ver ></p>
+                <p onclick="redirectToMurals()">Ver ></p>
             </div>
-            <div class="main-menu__item item-3">
+            <div id="menu-item-3" class="main-menu__item item-3"
+                onclick="manageMenuItem(this)">
                 <p>3. Murales número 3</p>
-                <p>Ver ></p>
+                <p onclick="redirectToMurals()">Ver ></p>
             </div>
-            <div class="main-menu__item item-4">
+            <div id="menu-item-4" class="main-menu__item item-4"
+                onclick="manageMenuItem(this)">
                 <p>4. Murales número 4</p>
-                <p>Ver ></p>
+                <p onclick="redirectToMurals()">Ver ></p>
             </div>
             </picture>
         </section>

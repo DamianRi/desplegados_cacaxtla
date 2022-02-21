@@ -38,6 +38,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: clip;
+    user-select: none;
     transition-duration: 0.5s;
 }
 .main-menu__item > p:first-child {
@@ -65,12 +66,12 @@
     top: 5%;
     left: 40%;
 }
-.main-menu__item:hover {
+.main-menu__item.main-menu__item--open {
     width: 200px;
     left: calc(50% - 100px);
     transition-duration: 0.5s;
 }
-.main-menu__item.item-2:hover {
+.main-menu__item.item-2.main-menu__item--open {
     width: 250px;
     left: calc(50% - 125px);
     transition-duration: 0.5s;
@@ -94,14 +95,14 @@
     .main-menu__item > p:last-child {
         padding: 0.5rem;
     }
-    .main-menu__item:hover {
+    .main-menu__item.main-menu__item--open {
         width: 240px;
         left: calc(50% - 120px);
         text-align: center;
         word-spacing: 0;
         transition-duration: 0.5s;
     }
-    .main-menu__item.item-2:hover {
+    .main-menu__item.item-2.main-menu__item--open {
         width: 300px;
         left: calc(50% - 150px);
         text-align: center;
@@ -134,11 +135,12 @@
         top: 7%;
         left: 41%;
     }
-    .main-menu__item:hover {
-        width: 240px;
-        left: calc(50% - 120px);
+    .main-menu__item.main-menu__item--open {
         text-align: center;
         word-spacing: 0;
         transition-duration: 0.5s;
-    }    
+    }
+    .main-menu__item.item-2.main-menu__item--open {
+        left: 53.5%;
+    }
 }
