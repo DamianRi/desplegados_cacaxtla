@@ -84,8 +84,8 @@ function closeMenuItems(list, exceptItem) {
     }
 }
 function redirectToMurals() {
-    window.location.href = "/views/murales.html";
+    window.location.href = "/desplegados_cacaxtla/views/murales.html";
 }
 function redirectToHome() {
-    window.location.href = "/index.html";
+    window.location.href = "/desplegados_cacaxtla/index.html";
 }
