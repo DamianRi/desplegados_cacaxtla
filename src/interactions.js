@@ -83,9 +83,36 @@ function closeMenuItems(list, exceptItem) {
             itemOpened.classList.remove("main-menu__item--open");
     }
 }
+/* REDIRECTIONS */
 function redirectToMurals() {
     window.location.href = "/desplegados_cacaxtla/views/murales.html";
 }
 function redirectToHome() {
     window.location.href = "/desplegados_cacaxtla/index.html";
 }
+
+/* MOVEMENTS */
+function randomMoveMenuItem(index) {
+    let menuItems = document.getElementsByClassName("main-menu__item");
+    let menuItemsTriangule = document.getElementsByClassName("triangule");
+
+    if (index > 3) {
+        index = 0
+    }
+
+    let menuItemShake = menuItems[index];
+    let menuItemShakeTriangule = menuItemsTriangule[index];
+
+    let menuItemShakeClasses = menuItemShake.classList;
+    if (!menuItemShakeClasses.contains("main-menu__item--open")) {
+        menuItemShake.classList.add("shake");
+        menuItemShakeTriangule.classList.add("shake");
+    }
+
+    setTimeout(() => {
+        menuItemShake.classList.remove("shake");
+        menuItemShakeTriangule.classList.remove("shake");
+        randomMoveMenuItem(index + 1);
+    }, 5000);
+}
+randomMoveMenuItem(0);
