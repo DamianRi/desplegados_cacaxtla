@@ -52,7 +52,7 @@ function manageMenuItem(currentItem) {
     let classListItem = currentItem.classList;
     if (classListItem.contains("main-menu__item--open")) {
         classListItem.remove("main-menu__item--open");
-    } else {
+    } else if (currentItem.offsetWidth < 40){
         classListItem.add("main-menu__item--open");
     }
 }
@@ -90,29 +90,3 @@ function redirectToMurals() {
 function redirectToHome() {
     window.location.href = "/desplegados_cacaxtla/index.html";
 }
-
-/* MOVEMENTS */
-function randomMoveMenuItem(index) {
-    let menuItems = document.getElementsByClassName("main-menu__item");
-    let menuItemsTriangule = document.getElementsByClassName("triangule");
-
-    if (index > 3) {
-        index = 0
-    }
-
-    let menuItemShake = menuItems[index];
-    let menuItemShakeTriangule = menuItemsTriangule[index];
-
-    let menuItemShakeClasses = menuItemShake.classList;
-    if (!menuItemShakeClasses.contains("main-menu__item--open")) {
-        menuItemShake.classList.add("shake");
-        menuItemShakeTriangule.classList.add("shake");
-    }
-
-    setTimeout(() => {
-        menuItemShake.classList.remove("shake");
-        menuItemShakeTriangule.classList.remove("shake");
-        randomMoveMenuItem(index + 1);
-    }, 5000);
-}
-randomMoveMenuItem(0);

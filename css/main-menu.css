@@ -33,7 +33,6 @@
     border-radius: 9rem;
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 0 0 0 2rem;
     background-color: var(--font-color);
     box-shadow: 0 0 0 4px var(--secondary);
     overflow: hidden;
@@ -43,22 +42,27 @@
     transition-duration: 0.5s;
     z-index: 2;
 }
-.main-menu__item > p:first-child {
+.main-menu__item > p {
     text-align: center;
+    text-indent: 5rem;
     margin: 0.4rem 0.8rem;
 }
-.main-menu__item > p:last-child {
-    width: 100%;
-    padding: 0.4rem 0.4rem;
+
+.main-menu__item > div {
+    width: fit-content;
+    padding: 0.4rem;
     background-color: var(--secondary);
 }
-.main-menu p > span {
+.link-mural > p {
+    display: inline-block;
+}
+.link-mural > span {
     display: inline-block;
     width: 1rem;
     height: 1rem;
     background-image: url("/desplegados_cacaxtla/img/icons/32/right_arrow.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;    
 }
 .triangule {
     position: absolute;
@@ -69,102 +73,115 @@
     border-top: 14px solid var(--secondary);
 }
 .shake {
-    animation: shake 0.5s;
-    animation-iteration-count: 4;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 @keyframes shake {
     0% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(0, -2px);
+    }
+    35% {
         transform: translate(0, 2px);
     }
     50% {
         transform: translate(0, -2px);
     }
     100% {
-        transform: translate(0, 2px);
+        transform: translate(0, 0);
     }
 }
 .menu-item-1__triangule {
+    animation-delay: 0.25s;
     top: 21.5%;
     left: 32.5%;
 }
 .menu-item-2__triangule {
+    animation-delay: 0.5s;
     top: 45%;
     left: 53%;
 }
 .menu-item-3__triangule {
+    animation-delay: 1.2s;
     top: 63.5%;
     left: 49.5%;
 }
 .menu-item-4__triangule {
+    animation-delay: 1.75s;
     top: 11.5%;
     left: 41.5%;
 }
 .main-menu__item.item-1 {
+    animation-delay: 0.25s;
     top: 11%;
     left: 32%;
 }
 .main-menu__item.item-2 {
+    animation-delay: 0.5s;
     top: 34.5%;
     left: 52.5%;
 }
 .main-menu__item.item-3 {
+    animation-delay: 1.2s;
     top: 53%;
     left: 49%;
 }
 .main-menu__item.item-4 {
+    animation-delay: 1.75s;
     top: 1%;
     left: 41%;
 }
-.main-menu__item.item-1.main-menu__item--open,
+.main-menu__item.main-menu__item--open,
+.main-menu__item:hover {
+    width: fit-content;
+    padding: 0;
+    z-index: 3;
+    animation: none;
+    transition-duration: 0.5s;
+}
+.main-menu__item.main-menu__item--open > p,
+.main-menu__item:hover > p {
+    text-indent: 0;
+}
+.main-menu__item.main-menu__item--open,
 .main-menu__item.item-1:hover {
-    width: 250px;
+    width: 24.79rem;
     left: calc(50% - 125px);
-    padding: 0;
-    z-index: 3;
-    transition-duration: 0.5s;
 }
-.main-menu__item.item-2.main-menu__item--open,
+.main-menu__item.main-menu__item--open,
 .main-menu__item.item-2:hover {
-    width: 148px;
+    width: 14.5rem;
     left: calc(50% - 74px);
-    padding: 0;
-    z-index: 3;
-    transition-duration: 0.5s;
 }
-.main-menu__item.item-3.main-menu__item--open,
+.main-menu__item.main-menu__item--open,
 .main-menu__item.item-3:hover {
-    width: 178px;
+    width: 16.6rem;
     left: calc(50% - 88px);
-    padding: 0;
-    z-index: 3;
-    transition-duration: 0.5s;
 }
-.main-menu__item.item-4.main-menu__item--open,
+.main-menu__item.main-menu__item--open,
 .main-menu__item.item-4:hover {
-    width: 126px;
+    width: 12.3rem;
     left: calc(50% - 63px);
-    padding: 0;
-    z-index: 3;
-    transition-duration: 0.5s;
 }
 @media screen and (min-width: 600px) and (min-height: 600px){
     .main-menu > picture > img {
         width: 100%;
-        max-width: 450px;
+        max-width: 45rem;
         object-fit: contain;
     }
     .main-menu__item {
         width: 3.2rem;
         height: 3.2rem;
-        padding: 0 0 0 3rem;
         border-radius: 9rem;
         font-size: 1.4rem;
-        word-spacing: 0.5rem;
     }
-    .main-menu__item > p:first-child {
+    .main-menu__item > p {
         margin: 0.5rem 1rem;
     }
-    .main-menu__item > p:last-child {
+    .main-menu__item > div {
         padding: 0.5rem;
     }
     .menu-item-1__triangule {
@@ -201,40 +218,36 @@
     }
     .main-menu__item.item-1.main-menu__item--open,
     .main-menu__item.item-1:hover {
-        width: 305px;
-        left: calc(50% - 157px);
-        padding: 0;
-        word-spacing: 0;
+        width: 29rem;
+        left: calc(50% - 14.5rem);
     }
     .main-menu__item.item-2.main-menu__item--open,
     .main-menu__item.item-2:hover {
-        width: 184px;
-        left: calc(50% - 92px);
-        padding: 0;
-        word-spacing: 0;
+        width: 17rem;
+        left: calc(50% - 8.5rem);
     }
     .main-menu__item.item-3.main-menu__item--open,
     .main-menu__item.item-3:hover {
-        width: 220px;
-        left: calc(50% - 112px);
-        padding: 0;
-        word-spacing: 0;
+        width: 20.6rem;
+        left: calc(50% - 10.425rem);
     }
     .main-menu__item.item-4.main-menu__item--open,
     .main-menu__item.item-4:hover {
-        width: 158px;
-        left: calc(50% - 80px);
-        padding: 0;
-        word-spacing: 0;
+        width: 14.47rem;
+        left: calc(50% - 7.25rem);
     }
 }
 @media screen and (min-width: 992px) {
     .welcome {
         font-size: 1.6rem;
     }
+    .main-menu > picture {
+        width: 75%;
+        max-width: 75rem;
+    }
     .main-menu > picture > img {
         width: 100%;
-        max-width: 750px;
+        max-width: 75rem;
         object-fit: contain;
     }
     .menu-item-1__triangule {
@@ -250,7 +263,7 @@
         left: 51.25%;
     }
     .menu-item-4__triangule {
-        top: 12.25%;
+        top: 12%;
         left: 41.75%;
     }
     .main-menu__item.item-1 {
@@ -268,25 +281,5 @@
     .main-menu__item.item-4 {
         top: 6%;
         left: 41%;
-    }
-    .main-menu__item.item-1:hover {
-        width: 310px;
-        padding: 0;
-        word-spacing: 0;
-    }
-    .main-menu__item.item-2:hover {
-        width: 184px;
-        padding: 0;
-        word-spacing: 0;
-    }
-    .main-menu__item.item-3:hover {
-        width: 224px;
-        padding: 0;
-        word-spacing: 0;
-    }
-    .main-menu__item.item-4:hover {
-        width: 160px;
-        padding: 0;
-        word-spacing: 0;
     }
 }
