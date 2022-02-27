@@ -60,7 +60,7 @@
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    background-image: url("/desplegados_cacaxtla/img/icons/32/right_arrow.svg");
+    background-image: url("/img/icons/32/right_arrow.svg");
     background-repeat: no-repeat;
     background-size: cover;    
 }
@@ -96,7 +96,7 @@
 }
 .menu-item-1__triangule {
     animation-delay: 0.25s;
-    top: 21.5%;
+    top: 21.25%;
     left: 32.5%;
 }
 .menu-item-2__triangule {
@@ -111,7 +111,7 @@
 }
 .menu-item-4__triangule {
     animation-delay: 1.75s;
-    top: 11.5%;
+    top: 11%;
     left: 41.5%;
 }
 .main-menu__item.item-1 {
@@ -134,35 +134,28 @@
     top: 1%;
     left: 41%;
 }
-.main-menu__item.main-menu__item--open,
-.main-menu__item:hover {
-    width: fit-content;
+.main-menu__item.main-menu__item--open {
     padding: 0;
     z-index: 3;
     animation: none;
     transition-duration: 0.5s;
 }
-.main-menu__item.main-menu__item--open > p,
-.main-menu__item:hover > p {
+.main-menu__item.main-menu__item--open > p {
     text-indent: 0;
 }
-.main-menu__item.main-menu__item--open,
-.main-menu__item.item-1:hover {
+.main-menu__item.item-1.main-menu__item--open {
     width: 24.79rem;
     left: calc(50% - 125px);
 }
-.main-menu__item.main-menu__item--open,
-.main-menu__item.item-2:hover {
+.main-menu__item.item-2.main-menu__item--open {
     width: 14.5rem;
     left: calc(50% - 74px);
 }
-.main-menu__item.main-menu__item--open,
-.main-menu__item.item-3:hover {
-    width: 16.6rem;
+.main-menu__item.item-3.main-menu__item--open {
+    width: 17.67rem; 
     left: calc(50% - 88px);
 }
-.main-menu__item.main-menu__item--open,
-.main-menu__item.item-4:hover {
+.main-menu__item.item-4.main-menu__item--open {
     width: 12.3rem;
     left: calc(50% - 63px);
 }
@@ -216,23 +209,19 @@
         top: 1%;
         left: 40%;
     }
-    .main-menu__item.item-1.main-menu__item--open,
-    .main-menu__item.item-1:hover {
+    .main-menu__item.item-1.main-menu__item--open {
         width: 29rem;
         left: calc(50% - 14.5rem);
     }
-    .main-menu__item.item-2.main-menu__item--open,
-    .main-menu__item.item-2:hover {
+    .main-menu__item.item-2.main-menu__item--open {
         width: 17rem;
         left: calc(50% - 8.5rem);
     }
-    .main-menu__item.item-3.main-menu__item--open,
-    .main-menu__item.item-3:hover {
+    .main-menu__item.item-3.main-menu__item--open {
         width: 20.6rem;
         left: calc(50% - 10.425rem);
     }
-    .main-menu__item.item-4.main-menu__item--open,
-    .main-menu__item.item-4:hover {
+    .main-menu__item.item-4.main-menu__item--open {
         width: 14.47rem;
         left: calc(50% - 7.25rem);
     }

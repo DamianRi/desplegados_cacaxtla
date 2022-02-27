@@ -38,7 +38,22 @@
             <h1 onclick="redirectToHome()">Desplegados del Catálogo de Cacaxtla</h1>
         </div>
         <div class="header-menu">
-            <span class="header-menu__icon"></span>
+            <span class="header-menu__icon" onclick="manageMenu()"></span>
+
+            <div class="header-menu__vertical inactive">
+                <div class="menu--opaque" onclick="manageMenu()"></div>
+                <div class="header-menu__vertical--open">
+                    <span class="close" onclick="manageMenu()"></span>
+                    <p class="menu__section">Menú</p>
+                    <a href="#">Subestructura del Edificio B</a>
+                    <a href="#">Templo Rojo</a>
+                    <a href="#">Templo de Venus</a>
+                    <a href="#">Edificio A</a>
+                    <a href="#">Créditos</a>
+                    <p class="menu__section">Enlaces externos</p>
+                    <a href="http://www.pinturamural.esteticas.unam.mx/CacaxtlaCat#overlay-context=user/1" target="_blank">Catálogo Cacaxtla</a>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -51,7 +66,7 @@
                 <div class="mural-section__title">
                     <h2>Mural poniente, escalera del Templo Rojo</h2>
                     <p>Muro oriente</p>
-                    <span id="close-section" onclick="manageMuralSectionLong()"></span>
+                    <span id="close-section" class="close" onclick="manageMuralSectionLong()"></span>
                 </div>
                 <div class="mural-section__description justify-text">
                     <p>

@@ -88,18 +88,12 @@
 .mural-section__title p {
     display: inline-block;
 }
-.mural-section__title > span {
-    display: inline-block;
-    position: absolute;
+.mural-section__title > .close {
     margin: 2rem;
     top: 0;
     right: 0;
     width: 2.4rem;
     height: 2.4rem;
-    background-image: url("/desplegados_cacaxtla/img/icons/32/close.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .mural-section__description {
     padding: 0.8rem 2rem 1.5rem 2rem;

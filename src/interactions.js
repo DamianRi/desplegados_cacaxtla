@@ -1,3 +1,22 @@
+/**
+ * Active or inactive the side right menu.
+ */
+function manageMenu() {
+    const verticalMenu = document.getElementsByClassName("header-menu__vertical");
+    let verticalMenuClasses = verticalMenu[0].classList;
+    // If section is inactive we want activate it
+    if (verticalMenuClasses.contains("inactive")) {
+        verticalMenuClasses.remove("inactive", "fadeOutMenu");
+        verticalMenuClasses.add("fadeInMenu");
+    } else { // Hide section
+        verticalMenuClasses.add("fadeOutMenu");
+        verticalMenuClasses.remove("fadeInMenu");
+        setTimeout(function () {
+            verticalMenuClasses.add('inactive');
+        }, 200);
+    }    
+}
+
 
 /**
  * Active or inactive the short section.

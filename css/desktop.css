@@ -9,6 +9,15 @@
     width: auto;
     height: 100%;
 }
+.fadeInMenu {
+    animation-duration: 0.4s;
+}
+.fadeOutMenu {
+    animation-duration: 0.4s;
+}
+.header-menu__vertical > .header-menu__vertical--open > .close {
+    margin: 2rem 2.5rem;
+}
 main {
     display: flex;
 }

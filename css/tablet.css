@@ -12,6 +12,7 @@ header {
 .header-menu .header-menu__icon {
     width: 5rem;
     height: 5rem;
+    margin: 1rem;
 }
 .header-title {
     width: 100%;
@@ -19,6 +20,9 @@ header {
 }
 .header-title > h1 {
     font-size: 2.4rem;
+}
+.header-menu__vertical > .header-menu__vertical--open > .close {
+    margin: 4rem 2.5rem;
 }
 footer {
     padding: 2rem;

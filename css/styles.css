@@ -14,6 +14,7 @@ html {
     --primary-soft: #33333380;
     --secondary: #00ACCD;
     --secondary-dark: #0088a3ff;
+    --secondary-light: rgb(161, 217, 228);
     --font-color: #FFF9FB;
     --font-color-secondary: #D8D5DB;
     --white: #fff;
@@ -22,13 +23,28 @@ html {
     --mural-section-short: 20px;
     --height-portrait-mural: calc(100% - var(--mural-section-short));
 }
-
+body {
+    overflow-x: hidden;
+}
 a {
     color: var(--font-color-secondary);
     text-decoration: none;
 }
 .justify-text {
     text-align: justify;
+}
+.close {
+    display: inline-block;
+    position: absolute;
+    margin: 2rem;
+    top: 0;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url("/img/icons/32/close.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /** Encabezado */
 header {
@@ -65,11 +81,107 @@ header {
     display: inline-block;
     width: 4rem;
     height: 4rem;
-    background-image: url('/desplegados_cacaxtla/img/icons/32/menu.svg');
+    background-image: url('../img/icons/32/menu.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     filter: invert(80%);
+}
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0.5;
+        top: 0;
+        right: -100%;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+        right: 0;
+     }
+}
+@keyframes fadeOutMenu {
+    0% {
+        opacity: 1;
+        right: 0;
+    }
+    100% {
+        opacity: 0.5;
+        right: -100%;
+     }
+}
+.fadeInMenu {
+    animation-name: fadeInMenu;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+.fadeOutMenu {
+    animation-name: fadeOutMenu;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+.header-menu > .header-menu__vertical {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 4;
+}
+.header-menu > .header-menu__vertical > .header-menu__vertical--open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45rem;
+    min-width: 32rem;
+    max-width: 45rem;
+    height: 100vh;
+    padding: 2rem 0;
+    background-color: var(--primary);
+    border-left: 1px solid var(--white);
+}
+.header-menu > .header-menu__vertical > .menu--opaque {
+    width: calc(100% - 40rem);
+    background-color: var(--primary);
+    opacity: 0.5;
+}
+.header-menu__vertical--open > p {
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid var(--white);
+    color: var(--secondary);
+}
+.header-menu__vertical--open > a:hover {
+    color: var(--black);
+    background-color: var(--secondary);
+    transition: 0.3s;
+}
+.header-menu__vertical--open > a {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+}
+.header-menu__vertical--open > .close {
+    margin: 2rem 1rem;
+    top: 0;
+    right: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    filter: invert(85%);
+}
+.header-menu__vertical.inactive {
+    display: none;
+}
+.menu__section {
+    margin: 2rem 0 0 0;
 }
 /* Contenido principal */
 main {
