@@ -60,7 +60,7 @@
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    background-image: url("/desplegados_cacaxtla/img/icons/32/right_arrow.svg");
+    background-image: url("../img/icons/32/right_arrow.svg");
     background-repeat: no-repeat;
     background-size: cover;    
 }

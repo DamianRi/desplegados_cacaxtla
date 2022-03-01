@@ -1,12 +1,169 @@
 {
-    "murales": [
+    "sections": [
         {
-            "subestructura_edificio_b": [
+            "name": "subestructura_edificio_b",
+            "size": 2,
+            "murales": [
                 {
-                    "oriente" : {
-                        "width": 0,
-                        "height": 0
-                    }
+                    "nombre" : "Mural de La Batalla, muro oriente.",
+                    "description": [
+                        "El muro oriente del mural de La Batalla fue el primero en ser descubierto, en 1976, cuando los arqueólogos Diana López de Molina y Daniel Molina realizaban calas para conocer la estructura sobre la que se encontraba el Edificio B.",
+                        "El talud mide 12.84 × 1.58 m y está prácticamente cubierto por el mural, la pintura abarca 11.67 × 1.58 m. Se han registrado 27 personajes en esta sección."
+                    ],
+                    "credits": "Gráfico del muro oriente del mural de La Batalla. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y M. J. Chávez, 2010. Ensamble digital: R. Alvarado y P. Peña, 2010.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                },
+                {
+                    "nombre" : "Mural de La Batalla, muro poniente.",
+                    "description": [
+                        "El muro poniente del mural de La Batalla fue liberado por los arqueólogos Diana López de Molina y Daniel Molina a partir del descubrimiento del muro oriente en 1976.",
+                        "La sección descubierta del talud mide 8.85 × 1.68 m y la pintura abarca 8.85 × 1.56 m. En esta sección del mural se han registrado 22 personajes."
+                    ],
+                    "credits": "Gráfico del muro poniente del mural de La Batalla. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y P. Peña, 2010. Ensamble digital: R. Alvarado y P. Peña, 2010.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                }
+            ]
+        },
+        {
+            "name": "templo_rojo",
+            "size": 6,
+            "murales": [
+                {
+                    "nombre" : "Pasillo de la Serpiente, muro oriente.",
+                    "description": [
+                        "La pintura del Pasillo de la Serpiente corresponde a la primera etapa constructiva y pictórica del Templo Rojo. Fue descubierta en 1984 por los arqueólogos Rosalba Delgadillo y Andrés Santana cuando realizaban pozos estratigráficos de estudio para la instalación de la techumbre sobre el Gran Basamento.",
+                        "La sección descubierta de cada mural tiene un largo de 3.66 m y la cenefa con pintura mide 38 cm de altura."
+                    ],
+                    "credits": "Gráfico de la pintura en el muro oriente del Pasillo de la Serpiente, Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: P. Peña y M. J. Chávez, 2008. Ensamble digital: P. Peña, 2014.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                },
+                {
+                    "nombre" : "Pasillo de la Serpiente, muro poniente.",
+                    "description": [
+                        "La pintura del Pasillo de la Serpiente corresponde a la primera etapa constructiva y pictórica del Templo Rojo. Fue descubierta en 1984 por los arqueólogos Rosalba Delgadillo y Andrés Santana cuando realizaban pozos estratigráficos de estudio para la instalación de la techumbre sobre el Gran Basamento.",
+                        "La sección descubierta de cada mural tiene un largo de 3.66 m y la cenefa con pintura mide 38 cm de altura."
+                    ],
+                    "credits": "Gráfico de la pintura en el muro poniente del Pasillo de la Serpiente, Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: P. Peña y M. J. Chávez, 2008. Ensamble digital: P. Peña, 2014.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                },
+                {
+                    "nombre" : "Mural de los Semidescarnados en la Banqueta.",
+                    "description": [
+                        "Los murales que se encuentran en la huella y peralte de la Banqueta del Templo Rojo fueron liberados en 1991.",
+                        "La parte descubierta de la banqueta mide 2.92 m de largo; la huella tiene 60 cm de ancho, mientras que el peralte tiene 43 cm de altura."
+                    ],
+                    "credits": "Gráfico de los murales en la Banqueta del Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y P. Peña, 2008.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                },
+                {
+                    "nombre" : "Glifos en el peralte de la Banqueta.",
+                    "description": [
+                        "Los murales que se encuentran en la huella y peralte de la Banqueta del Templo Rojo fueron liberados en 1991.",
+                        "La parte descubierta de la banqueta mide 2.92 m de largo; la huella tiene 60 cm de ancho, mientras que el peralte tiene 43 cm de altura."
+                    ],
+                    "credits": "Gráfico de los murales en la Banqueta del Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y P. Peña, 2008.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                },
+                {
+                    "nombre" : "Mural oriente de la Escalera.",
+                    "description": [
+                        "Durante 1984, dentro de uno de los pozos que se realizaron como estudio para la instalación de la techumbre sobre el Gran Basamento, los arqueólogos Rosalba Delgadillo y Andrés Santana localizaron pintura en el muro poniente del Templo Rojo así como el peldaño superior de la escalera. La liberación completa de los murales oriente y poniente se realizó entre 1985 y 1989.",
+                        "El muro oriente mide 3.16 × 4.90 m de los que 2.67 m corresponden al área de la escalera; la pintura abarca la totalidad del muro a excepción de un guardapolvo de 28 cm de alto."
+                    ],
+                    "credits": "Gráfico del muro oriente del mural de la escalera, Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: R. Alvarado y P. Peña, 2008. Ensamble digital: P. Peña y R. Alvarado, 2008.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                },
+                {
+                    "nombre" : "Mural poniente de la Escalera.",
+                    "description": [
+                        "Durante 1984, dentro de uno de los pozos que se realizaron como estudio para la instalación de la techumbre sobre el Gran Basamento, los arqueólogos Rosalba Delgadillo y Andrés Santana localizaron pintura en el muro poniente del Templo Rojo así como el peldaño superior de la escalera. La liberación completa de los murales oriente y poniente se realizó entre 1985 y 1989.",
+                        "El muro poniente mide 3.07 × 3.04 m sobre los que está plasmada la pintura mural, a excepción de 28 cm de guardapolvo en la esquina inferior izquierda."
+                    ],
+                    "credits": "Gráfico del muro poniente del mural de la escalera, Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: R. Alvarado y P. Peña, 2008. Ensamble digital: P. Peña y R. Alvarado, 2008.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                }
+            ]
+        },
+        {
+            "name": "templo_venus",
+            "size": 1,
+            "murales": [
+                {
+                    "name": "Murales en los pilares sur y norte.",
+                    "description": [
+                        "El Templo de Venus fue descubierto cuando se realizaban los trabajos para la instalación de la techumbre que cubre al Gran Basamento, entre los años 1985 y 1987. Fue liberado por los arqueólogos Lino Espinoza y Pedro Ortega.",
+                        "Se trata de un edificio rectangular, orientado de norte a sur, ubicado en el Sector Sur. Los pilares sobre los que se encuentran los murales se localizan dentro de un recinto que mide 7.44 x 4.20 m."
+                    ],
+                    "credits": "Gráfico de los murales en los pilares del Templo de Venus. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y P. Peña, 2008.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                }
+            ]
+        },
+        {
+            "name": "edificio_a",
+            "size": 2,
+            "murales": [
+                {
+                    "name": "Pórtico.",
+                    "description": [
+                        "En 1975 un pozo de saqueo condujo al descubrimiento de la pintura mural en el muro sur de este edificio; a partir de este hecho, entre 1975 y 1976 los arqueólogos Diana López de Molina y Daniel Molina trabajaron en la liberación de los muros norte y sur y de sus respectivas jambas.",
+                        "El mural norte tiene una longitud de 1.75 m (de los cuales 46 cm corresponden al relieve de barro) y una altura máxima de 1.72 m; la jamba norte mide 63 cm de ancho y su altura máxima es de 1.33 m. El mural sur mide 2.21 m de longitud y su altura máxima es de 1.76 m, mientras que la jamba sur mide 63 cm de ancho y tiene una altura máxima de 1.36 m."
+                    ],
+                    "credits": "Gráfico de los murales en el pórtico del Edificio A. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: R. Alvarado, P. Peña y M. J. Chávez, 2010. Ensamble digital: M. J. Chávez, 2018.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
+                },
+                {
+                    "name": "Mural de las Serpientes Entrelazadas.",
+                    "description": [
+                        "El mural interior del Edificio A fue liberado también durante la primer temporada de trabajo (1975-1976) de los arqueólogos Diana López de Molina y Daniel Molina en Cacaxtla.",
+                        "El muro este del recinto mide 1.85 × 9.37 m, mientras que la pintura mural mide 1.10 × 4.67 m."
+                    ],
+                    "credits": "Gráfico del mural interior, Edificio A. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: R. Alvarado y T. Gónzalez, 2008. Ensamble digital: R. Alvarado, 2008.)",
+                    "source-image": "urlimage",
+                    "source-line": "urlline",
+                    "source-isometric": "urliso",
+                    "width": 1000,
+                    "height": 1000
                 }
             ]
         }

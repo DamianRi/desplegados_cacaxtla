@@ -41,7 +41,7 @@ a {
     right: 0;
     width: 2.4rem;
     height: 2.4rem;
-    background-image: url("/desplegados_cacaxtla/img/icons/32/close.svg");
+    background-image: url("../img/icons/32/close.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ header {
     display: inline-block;
     width: 4rem;
     height: 4rem;
-    background-image: url('/desplegados_cacaxtla/img/icons/32/menu.svg');
+    background-image: url('../img/icons/32/menu.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -140,19 +140,18 @@ header {
     height: 100vh;
     padding: 2rem 0;
     background-color: var(--primary);
-    border-left: 1px solid var(--white);
 }
 .header-menu > .header-menu__vertical > .menu--opaque {
     width: calc(100% - 40rem);
     background-color: var(--primary);
     opacity: 0.5;
 }
-.header-menu__vertical--open > p {
-    height: 4rem;
+.header-menu__vertical--open > .menu__section {
+    height: 3.2rem;
     padding: 0.5rem 1rem;
     font-size: 1.6rem;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid var(--white);
     color: var(--secondary);
 }
@@ -164,9 +163,8 @@ header {
 .header-menu__vertical--open > a {
     display: block;
     width: 100%;
-    height: 4rem;
-    padding: 1rem;
-    text-align: center;
+    height: 3.8rem;
+    padding: 1rem 4rem;
     font-size: 1.6rem;
 }
 .header-menu__vertical--open > .close {
@@ -179,9 +177,6 @@ header {
 }
 .header-menu__vertical.inactive {
     display: none;
-}
-.menu__section {
-    margin: 2rem 0 0 0;
 }
 /* Contenido principal */
 main {
