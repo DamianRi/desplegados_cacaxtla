@@ -28,13 +28,13 @@
 .main-menu__item {
     position: absolute;
     display: flex;
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 9rem;
     font-size: 1.2rem;
     font-weight: bold;
     background-color: var(--font-color);
-    box-shadow: 0 0 0 4px var(--secondary);
+    border: 1rem solid var(--secondary);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: clip;
@@ -82,13 +82,13 @@
         transform: translate(0, 0);
     }
     10% {
-        transform: translate(0, -2px);
+        transform: translate(0, -1px);
     }
     35% {
-        transform: translate(0, 2px);
+        transform: translate(0, 3px);
     }
     50% {
-        transform: translate(0, -2px);
+        transform: translate(0, -1px);
     }
     100% {
         transform: translate(0, 0);
@@ -116,27 +116,28 @@
 }
 .main-menu__item.item-1 {
     animation-delay: 0.25s;
-    top: 11%;
-    left: 32%;
+    top: 9%;
+    left: 30.75%;
 }
 .main-menu__item.item-2 {
     animation-delay: 0.5s;
-    top: 34.5%;
-    left: 52.5%;
+    top: 32.25%;
+    left: 51.3%;
 }
 .main-menu__item.item-3 {
     animation-delay: 1.2s;
-    top: 53%;
-    left: 49%;
+    top: 50.75%;
+    left: 48%;
 }
 .main-menu__item.item-4 {
     animation-delay: 1.75s;
-    top: 1%;
-    left: 41%;
+    top: -1.5%;
+    left: 40%;
 }
 .main-menu__item.main-menu__item--open {
     padding: 0;
     z-index: 3;
+    border: 0.4rem solid var(--secondary);
     animation: none;
     transition-duration: 0.5s;
 }
@@ -144,20 +145,20 @@
     text-indent: 0;
 }
 .main-menu__item.item-1.main-menu__item--open {
-    width: 24.79rem;
-    left: calc(50% - 125px);
+    width: 25.59rem;
+    left: calc(50% - 12.79rem);
 }
 .main-menu__item.item-2.main-menu__item--open {
-    width: 14.5rem;
-    left: calc(50% - 74px);
+    width: 15.35rem;
+    left: calc(50% - 7.67rem);
 }
 .main-menu__item.item-3.main-menu__item--open {
-    width: 17.67rem; 
-    left: calc(50% - 88px);
+    width: 18.47rem; 
+    left: calc(50% - 9.23rem);
 }
 .main-menu__item.item-4.main-menu__item--open {
-    width: 12.3rem;
-    left: calc(50% - 63px);
+    width: 13.19rem;
+    left: calc(50% - 6.59rem);
 }
 @media screen and (min-width: 600px) and (min-height: 600px){
     .main-menu > picture > img {
@@ -166,8 +167,9 @@
         object-fit: contain;
     }
     .main-menu__item {
-        width: 3.2rem;
-        height: 3.2rem;
+        width: 4rem;
+        height: 4rem;
+        border: 1.2rem solid var(--secondary);
         border-radius: 9rem;
         font-size: 1.4rem;
     }
@@ -194,36 +196,36 @@
         left: 41.5%;
     }
     .main-menu__item.item-1 {
-        top: 11%;
-        left: 32%;
+        top: 9%;
+        left: 30.8%;
     }
     .main-menu__item.item-2 {
-        top: 34.5%;
-        left: 52%;
+        top: 33.1%;
+        left: 50.75%;
     }
     .main-menu__item.item-3 {
-        top: 53%;
-        left: 49%;
+        top: 51.5%;
+        left: 48.25%;
     }
     .main-menu__item.item-4 {
-        top: 1%;
-        left: 40%;
+        top: -0.9%;
+        left: 39.5%;
     }
     .main-menu__item.item-1.main-menu__item--open {
-        width: 29rem;
-        left: calc(50% - 14.5rem);
+        width: 29.76rem;
+        left: calc(50% - 14.88rem);
     }
     .main-menu__item.item-2.main-menu__item--open {
-        width: 17rem;
-        left: calc(50% - 8.5rem);
+        width: 17.81rem;
+        left: calc(50% - 8.9rem);
     }
     .main-menu__item.item-3.main-menu__item--open {
-        width: 20.6rem;
-        left: calc(50% - 10.425rem);
+        width: 21.44rem;
+        left: calc(50% - 10.72rem);
     }
     .main-menu__item.item-4.main-menu__item--open {
-        width: 14.47rem;
-        left: calc(50% - 7.25rem);
+        width: 15.28rem;
+        left: calc(50% - 7.64rem);
     }
 }
 @media screen and (min-width: 992px) {
@@ -256,19 +258,19 @@
         left: 41.75%;
     }
     .main-menu__item.item-1 {
-        top: 17.5%;
-        left: 33%;
+        top: 16.25%;
+        left: 32.5%;
     }
     .main-menu__item.item-2 {
-        top: 40%;
-        left: 53.5%;
+        top: 39%;
+        left: 53%;
     }
     .main-menu__item.item-3 {
-        top: 59%;
-        left: 50.5%;
+        top: 58%;
+        left: 50%;
     }
     .main-menu__item.item-4 {
-        top: 6%;
-        left: 41%;
+        top: 4.5%;
+        left: 40.5%;
     }
 }

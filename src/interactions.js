@@ -71,7 +71,7 @@ function manageMenuItem(currentItem) {
     let classListItem = currentItem.classList;
     if (classListItem.contains("main-menu__item--open")) {
         classListItem.remove("main-menu__item--open");
-    } else if (currentItem.offsetWidth < 40){
+    } else if (currentItem.offsetWidth < 50){
         classListItem.add("main-menu__item--open");
     }
 }
