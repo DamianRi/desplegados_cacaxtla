@@ -11,8 +11,8 @@
                         "El talud mide 12.84 × 1.58 m y está prácticamente cubierto por el mural, la pintura abarca 11.67 × 1.58 m. Se han registrado 27 personajes en esta sección."
                     ],
                     "credits": "Gráfico del muro oriente del mural de La Batalla. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y M. J. Chávez, 2010. Ensamble digital: R. Alvarado y P. Peña, 2010.)",
-                    "source-image": "/img/tiles/1-1",
-                    "source-line": "/img/tiles/1-1dibujo",
+                    "source-image": "/img/tiles/1-1/",
+                    "source-line": "/img/tiles/1-1dibujo/",
                     "source-isometric": "1-1.jpg",
                     "width": 12846,
                     "height": 2019
@@ -24,8 +24,8 @@
                         "La sección descubierta del talud mide 8.85 × 1.68 m y la pintura abarca 8.85 × 1.56 m. En esta sección del mural se han registrado 22 personajes."
                     ],
                     "credits": "Gráfico del muro poniente del mural de La Batalla. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y P. Peña, 2010. Ensamble digital: R. Alvarado y P. Peña, 2010.)",
-                    "source-image": "/img/tiles/1-2",
-                    "source-line": "/img/tiles/1-2dibujo",
+                    "source-image": "/img/tiles/1-2/",
+                    "source-line": "/img/tiles/1-2dibujo/",
                     "source-isometric": "1-2.jpg",
                     "width": 9875,
                     "height": 2019
@@ -43,8 +43,8 @@
                         "La sección descubierta de cada mural tiene un largo de 3.66 m y la cenefa con pintura mide 38 cm de altura."
                     ],
                     "credits": "Gráfico de la pintura en el muro oriente del Pasillo de la Serpiente, Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: P. Peña y M. J. Chávez, 2008. Ensamble digital: P. Peña, 2014.)",
-                    "source-image": "/img/tiles/2-1",
-                    "source-line": "/img/tiles/2-1dibujo",
+                    "source-image": "/img/tiles/2-1/",
+                    "source-line": "/img/tiles/2-1dibujo/",
                     "source-isometric": "2-1.jpg",
                     "width": 10284,
                     "height": 2019
@@ -56,8 +56,8 @@
                         "La sección descubierta de cada mural tiene un largo de 3.66 m y la cenefa con pintura mide 38 cm de altura."
                     ],
                     "credits": "Gráfico de la pintura en el muro poniente del Pasillo de la Serpiente, Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: P. Peña y M. J. Chávez, 2008. Ensamble digital: P. Peña, 2014.)",
-                    "source-image": "/img/tiles/2-2",
-                    "source-line": "/img/tiles/2-2dibujo",
+                    "source-image": "/img/tiles/2-2/",
+                    "source-line": "/img/tiles/2-2dibujo/",
                     "source-isometric": "2-2.jpg",
                     "width": 10284,
                     "height": 2019
@@ -69,8 +69,8 @@
                         "La parte descubierta de la banqueta mide 2.92 m de largo; la huella tiene 60 cm de ancho, mientras que el peralte tiene 43 cm de altura."
                     ],
                     "credits": "Gráfico de los murales en la Banqueta del Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y P. Peña, 2008.)",
-                    "source-image": "/img/tiles/2-3",
-                    "source-line": "/img/tiles/2-3dibujo",
+                    "source-image": "/img/tiles/2-3/",
+                    "source-line": "/img/tiles/2-3dibujo/",
                     "source-isometric": "2-3.jpg",
                     "width": 7123,
                     "height": 1748
@@ -82,8 +82,8 @@
                         "La parte descubierta de la banqueta mide 2.92 m de largo; la huella tiene 60 cm de ancho, mientras que el peralte tiene 43 cm de altura."
                     ],
                     "credits": "Gráfico de los murales en la Banqueta del Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y P. Peña, 2008.)",
-                    "source-image": "/img/tiles/2-4",
-                    "source-line": "/img/tiles/2-4dibujo",
+                    "source-image": "/img/tiles/2-4/",
+                    "source-line": "/img/tiles/2-4dibujo/",
                     "source-isometric": "2-4.jpg",
                     "width": 7123,
                     "height": 1748
@@ -95,8 +95,8 @@
                         "El muro oriente mide 3.16 × 4.90 m de los que 2.67 m corresponden al área de la escalera; la pintura abarca la totalidad del muro a excepción de un guardapolvo de 28 cm de alto."
                     ],
                     "credits": "Gráfico del muro oriente del mural de la escalera, Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: R. Alvarado y P. Peña, 2008. Ensamble digital: P. Peña y R. Alvarado, 2008.)",
-                    "source-image": "/img/tiles/2-5",
-                    "source-line": "/img/tiles/2-5dibujo",
+                    "source-image": "/img/tiles/2-5/",
+                    "source-line": "/img/tiles/2-5dibujo/",
                     "source-isometric": "2-5.jpg",
                     "width": 4090,
                     "height": 2019
@@ -108,8 +108,8 @@
                         "El muro poniente mide 3.07 × 3.04 m sobre los que está plasmada la pintura mural, a excepción de 28 cm de guardapolvo en la esquina inferior izquierda."
                     ],
                     "credits": "Gráfico del muro poniente del mural de la escalera, Templo Rojo. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: R. Alvarado y P. Peña, 2008. Ensamble digital: P. Peña y R. Alvarado, 2008.)",
-                    "source-image": "/img/tiles/2-6",
-                    "source-line": "/img/tiles/2-6dibujo",
+                    "source-image": "/img/tiles/2-6/",
+                    "source-line": "/img/tiles/2-6dibujo/",
                     "source-isometric": "2-6.jpg",
                     "width": 3131,
                     "height": 2019
@@ -126,9 +126,9 @@
                         "El Templo de Venus fue descubierto cuando se realizaban los trabajos para la instalación de la techumbre que cubre al Gran Basamento, entre los años 1985 y 1987. Fue liberado por los arqueólogos Lino Espinoza y Pedro Ortega.",
                         "Se trata de un edificio rectangular, orientado de norte a sur, ubicado en el Sector Sur. Los pilares sobre los que se encuentran los murales se localizan dentro de un recinto que mide 7.44 x 4.20 m."
                     ],
-                    "credits": "Gráfico de los murales en los pilares del Templo de Venus. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Fotos: R. Alvarado y P. Peña, 2008.)",
-                    "source-image": "/img/tiles/3-1",
-                    "source-line": "/img/tiles/3-1dibujo",
+                    "credits": "Gráfico de los murales en los pilares del Templo de Venus. (Ilustración: I. Hernández, 2022. Fotos: R. Alvarado y P. Peña, 2008.)",
+                    "source-image": "/img/tiles/3-1/",
+                    "source-line": "/img/tiles/3-1dibujo/",
                     "source-isometric": "3-1.jpg",
                     "width": 4186,
                     "height": 2019
@@ -146,8 +146,8 @@
                         "El mural norte tiene una longitud de 1.75 m (de los cuales 46 cm corresponden al relieve de barro) y una altura máxima de 1.72 m; la jamba norte mide 63 cm de ancho y su altura máxima es de 1.33 m. El mural sur mide 2.21 m de longitud y su altura máxima es de 1.76 m, mientras que la jamba sur mide 63 cm de ancho y tiene una altura máxima de 1.36 m."
                     ],
                     "credits": "Gráfico de los murales en el pórtico del Edificio A. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: R. Alvarado, P. Peña y M. J. Chávez, 2010. Ensamble digital: M. J. Chávez, 2018.)",
-                    "source-image": "/img/tiles/4-1",
-                    "source-line": "/img/tiles/4-1dibujo",
+                    "source-image": "/img/tiles/4-1/",
+                    "source-line": "/img/tiles/4-1dibujo/",
                     "source-isometric": "4-1.jpg",
                     "width": 7553,
                     "height": 2019
@@ -159,8 +159,8 @@
                         "El muro este del recinto mide 1.85 × 9.37 m, mientras que la pintura mural mide 1.10 × 4.67 m."
                     ],
                     "credits": "Gráfico del mural interior, Edificio A. (Ilustración: I. Hernández con apoyo de V. Godoy, 2018. Foto: R. Alvarado y T. Gónzalez, 2008. Ensamble digital: R. Alvarado, 2008.)",
-                    "source-image": "/img/tiles/4-2",
-                    "source-line": "/img/tiles/4-2dibujo",
+                    "source-image": "/img/tiles/4-2/",
+                    "source-line": "/img/tiles/4-2dibujo/",
                     "source-isometric": "4-2.jpg",
                     "width": 8772,
                     "height": 2019

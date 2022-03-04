@@ -45,10 +45,10 @@
                 <div class="header-menu__vertical--open">
                     <span class="close" onclick="manageMenu()"></span>
                     <p class="menu__section">Menú</p>
-                    <a href="#">Subestructura del Edificio B</a>
-                    <a href="#">Templo Rojo</a>
-                    <a href="#">Templo de Venus</a>
-                    <a href="#">Edificio A</a>
+                    <a href="./murales.html?section=1">Subestructura del Edificio B</a>
+                    <a href="./murales.html?section=2">Templo Rojo</a>
+                    <a href="./murales.html?section=3">Templo de Venus</a>
+                    <a href="./murales.html?section=4">Edificio A</a>
                     <a href="#">Créditos</a>
                     <p class="menu__section">Enlaces externos</p>
                     <a href="http://www.pinturamural.esteticas.unam.mx/CacaxtlaCat#overlay-context=user/1" target="_blank">Catálogo Cacaxtla</a>
@@ -83,8 +83,7 @@
                 <div class="mural-section__location-image">
                     <picture>
                         <!-- Se deberá cargar dinámicamente la fuente a considerar según el mural cargado -->
-                        <source media="(min-width: 768px)" srcset="../img/isometricos/desktop/Batalla_ote_iso_desktop.jpg">
-                        <img src="../img/isometricos/mobile/Batalla_ote_iso_mobile.jpg" alt="Isométrico del mural"/>
+                        <img src="" alt="Isométrico del mural"/>
                     </picture>
                 </div>
                 <div class="mural-section__credits">
@@ -115,7 +114,9 @@
         <a href="">Créditos</a>
     </footer>
     <script src="../src/openseadragon/openseadragon.js"></script>
-    <script src="../src/manageImages.js"></script>
-    <script src="../src/interactions.js"></script>
+    <script src="../src/menu.js"></script>
+    <script type="module" src="../src/manageImages.js"></script>
+    <script src="../src/murals.js"></script>
+    <script src="../src/route.js"></script>
 </body>
 </html>

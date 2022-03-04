@@ -45,10 +45,10 @@
                 <div class="header-menu__vertical--open">
                     <span class="close" onclick="manageMenu()"></span>
                     <p class="menu__section">Menú</p>
-                    <a href="#">Subestructura del Edificio B</a>
-                    <a href="#">Templo Rojo</a>
-                    <a href="#">Templo de Venus</a>
-                    <a href="#">Edificio A</a>
+                    <a href="./views/murales.html?section=1">Subestructura del Edificio B</a>
+                    <a href="./views/murales.html?section=2">Templo Rojo</a>
+                    <a href="./views/murales.html?section=3">Templo de Venus</a>
+                    <a href="./views/murales.html?section=4">Edificio A</a>
                     <a href="#">Créditos</a>
                     <p class="menu__section">Enlaces externos</p>
                     <a href="http://www.pinturamural.esteticas.unam.mx/CacaxtlaCat#overlay-context=user/1" target="_blank">Catálogo Cacaxtla</a>
@@ -63,13 +63,13 @@
             <picture>
                 <source media="(max-width: 768px)" srcset="./img/isometricos/mobile/0.jpg">
                 <source media="(min-width: 768px)" srcset="./img/isometricos/desktop/0.jpg">
-                <img src="" alt="Mapa de las ubicaciones">
+                <img src="./img/isometricos/mobile/0.jpg" alt="Mapa de las ubicaciones">
 
                 <div class="menu-item-1__triangule triangule"></div>
                 <div id="menu-item-1" class="main-menu__item item-1 shake"
                     onclick="manageMenuItem(this)">
                     <p>Subestructura del Edificio B</p>
-                    <div class="link-mural" onclick="redirectToMurals()">
+                    <div class="link-mural" onclick="redirectToMurals(1)">
                         <p>Ver</p>
                         <span></span>
                     </div>
@@ -79,7 +79,7 @@
                 <div id="menu-item-2" class="main-menu__item item-2 shake"
                 onclick="manageMenuItem(this)">
                     <p>Templo Rojo</p>
-                    <div class="link-mural" onclick="redirectToMurals()">
+                    <div class="link-mural" onclick="redirectToMurals(2)">
                         <p>Ver</p>
                         <span></span>
                     </div>
@@ -89,7 +89,7 @@
                 <div id="menu-item-3" class="main-menu__item item-3 shake"
                     onclick="manageMenuItem(this)">
                     <p>Templo de Venus</p>
-                    <div class="link-mural" onclick="redirectToMurals()">
+                    <div class="link-mural" onclick="redirectToMurals(3)">
                         <p>Ver</p> 
                         <span></span>
                     </div>
@@ -99,7 +99,7 @@
                 <div id="menu-item-4" class="main-menu__item item-4 shake"
                     onclick="manageMenuItem(this)">
                     <p>Edificio A</p>
-                    <div class="link-mural" onclick="redirectToMurals()">
+                    <div class="link-mural" onclick="redirectToMurals(4)">
                         <p>Ver</p>
                         <span></span>
                     </div>
@@ -117,7 +117,7 @@
         <a href="">Créditos</a>
     </footer>
     <script src="./src/openseadragon/openseadragon.js"></script>
-    <script src="./src/manageImages.js"></script>
-    <script src="./src/interactions.js"></script>
+    <script src="./src/menu.js"></script>
+    <script src="./src/route.js"></script>
 </body>
 </html>
