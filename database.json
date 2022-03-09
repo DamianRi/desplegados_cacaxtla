@@ -1,11 +1,11 @@
 {
     "sections": [
         {
-            "name": "subestructura_edificio_b",
+            "name": "Subestructura del Edificio B.",
             "size": 2,
             "murales": [
                 {
-                    "nombre" : "Mural de La Batalla, muro oriente.",
+                    "name" : "Mural de La Batalla, muro oriente.",
                     "description": [
                         "El muro oriente del mural de La Batalla fue el primero en ser descubierto, en 1976, cuando los arqueólogos Diana López de Molina y Daniel Molina realizaban calas para conocer la estructura sobre la que se encontraba el Edificio B.",
                         "El talud mide 12.84 × 1.58 m y está prácticamente cubierto por el mural, la pintura abarca 11.67 × 1.58 m. Se han registrado 27 personajes en esta sección."
@@ -18,7 +18,7 @@
                     "height": 2019
                 },
                 {
-                    "nombre" : "Mural de La Batalla, muro poniente.",
+                    "name" : "Mural de La Batalla, muro poniente.",
                     "description": [
                         "El muro poniente del mural de La Batalla fue liberado por los arqueólogos Diana López de Molina y Daniel Molina a partir del descubrimiento del muro oriente en 1976.",
                         "La sección descubierta del talud mide 8.85 × 1.68 m y la pintura abarca 8.85 × 1.56 m. En esta sección del mural se han registrado 22 personajes."
@@ -33,11 +33,11 @@
             ]
         },
         {
-            "name": "templo_rojo",
+            "name": "Templo Rojo",
             "size": 6,
             "murales": [
                 {
-                    "nombre" : "Pasillo de la Serpiente, muro oriente.",
+                    "name" : "Pasillo de la Serpiente, muro oriente.",
                     "description": [
                         "La pintura del Pasillo de la Serpiente corresponde a la primera etapa constructiva y pictórica del Templo Rojo. Fue descubierta en 1984 por los arqueólogos Rosalba Delgadillo y Andrés Santana cuando realizaban pozos estratigráficos de estudio para la instalación de la techumbre sobre el Gran Basamento.",
                         "La sección descubierta de cada mural tiene un largo de 3.66 m y la cenefa con pintura mide 38 cm de altura."
@@ -50,7 +50,7 @@
                     "height": 2019
                 },
                 {
-                    "nombre" : "Pasillo de la Serpiente, muro poniente.",
+                    "name" : "Pasillo de la Serpiente, muro poniente.",
                     "description": [
                         "La pintura del Pasillo de la Serpiente corresponde a la primera etapa constructiva y pictórica del Templo Rojo. Fue descubierta en 1984 por los arqueólogos Rosalba Delgadillo y Andrés Santana cuando realizaban pozos estratigráficos de estudio para la instalación de la techumbre sobre el Gran Basamento.",
                         "La sección descubierta de cada mural tiene un largo de 3.66 m y la cenefa con pintura mide 38 cm de altura."
@@ -63,7 +63,7 @@
                     "height": 2019
                 },
                 {
-                    "nombre" : "Mural de los Semidescarnados en la Banqueta.",
+                    "name" : "Mural de los Semidescarnados en la Banqueta.",
                     "description": [
                         "Los murales que se encuentran en la huella y peralte de la Banqueta del Templo Rojo fueron liberados en 1991.",
                         "La parte descubierta de la banqueta mide 2.92 m de largo; la huella tiene 60 cm de ancho, mientras que el peralte tiene 43 cm de altura."
@@ -76,7 +76,7 @@
                     "height": 1748
                 },
                 {
-                    "nombre" : "Glifos en el peralte de la Banqueta.",
+                    "name" : "Glifos en el peralte de la Banqueta.",
                     "description": [
                         "Los murales que se encuentran en la huella y peralte de la Banqueta del Templo Rojo fueron liberados en 1991.",
                         "La parte descubierta de la banqueta mide 2.92 m de largo; la huella tiene 60 cm de ancho, mientras que el peralte tiene 43 cm de altura."
@@ -89,7 +89,7 @@
                     "height": 1748
                 },
                 {
-                    "nombre" : "Mural oriente de la Escalera.",
+                    "name" : "Mural oriente de la Escalera.",
                     "description": [
                         "Durante 1984, dentro de uno de los pozos que se realizaron como estudio para la instalación de la techumbre sobre el Gran Basamento, los arqueólogos Rosalba Delgadillo y Andrés Santana localizaron pintura en el muro poniente del Templo Rojo así como el peldaño superior de la escalera. La liberación completa de los murales oriente y poniente se realizó entre 1985 y 1989.",
                         "El muro oriente mide 3.16 × 4.90 m de los que 2.67 m corresponden al área de la escalera; la pintura abarca la totalidad del muro a excepción de un guardapolvo de 28 cm de alto."
@@ -102,7 +102,7 @@
                     "height": 2019
                 },
                 {
-                    "nombre" : "Mural poniente de la Escalera.",
+                    "name" : "Mural poniente de la Escalera.",
                     "description": [
                         "Durante 1984, dentro de uno de los pozos que se realizaron como estudio para la instalación de la techumbre sobre el Gran Basamento, los arqueólogos Rosalba Delgadillo y Andrés Santana localizaron pintura en el muro poniente del Templo Rojo así como el peldaño superior de la escalera. La liberación completa de los murales oriente y poniente se realizó entre 1985 y 1989.",
                         "El muro poniente mide 3.07 × 3.04 m sobre los que está plasmada la pintura mural, a excepción de 28 cm de guardapolvo en la esquina inferior izquierda."
@@ -117,7 +117,7 @@
             ]
         },
         {
-            "name": "templo_venus",
+            "name": "Templo de Venus",
             "size": 1,
             "murales": [
                 {
@@ -136,7 +136,7 @@
             ]
         },
         {
-            "name": "edificio_a",
+            "name": "Edificio A",
             "size": 2,
             "murales": [
                 {

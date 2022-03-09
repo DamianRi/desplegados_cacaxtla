@@ -76,19 +76,16 @@
 .mural-section.long.inactive {
     display: none;
 }
-.mural-section__title {
+.mural-section-long__title {
     padding: 2rem 0 0 2rem;
     width: 90%;
     background-color: var(--secondary);
 }
-.mural-section__title h2 {
+.mural-section-long__title h2 {
     display: inline-block;
     font-size: 1.4rem;
 }
-.mural-section__title p {
-    display: inline-block;
-}
-.mural-section__title > .close {
+.mural-section-long__title > .close {
     margin: 2rem;
     top: 0;
     right: 0;
@@ -233,7 +230,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         grid-template-rows: fit-content(30px) auto fit-content(18%);
         background: linear-gradient(to right, var(--secondary) 50%, var(--white) 50%);
     }
-    .mural-section__title {
+    .mural-section-long__title {
         padding: 2rem 2rem 1rem 2rem;
         width: 100%;
     }
@@ -283,17 +280,16 @@ div#mural-toolbar.mural-toolbar>div>div {
     .mural-section.long{
         height: 80vh;
     }
-    .mural-section__title {
+    .mural-section-long__title {
         margin: 0 0 2rem 0;
     }
-    .mural-section__title > h2 {
+    .mural-section-long__title > h2 {
         font-size: 2rem;
     }
-    .mural-section__title > p {
-        display: block;
+    .mural-section-long__title > p {
         font-size: 1.3rem;
     }
-    .mural-section__title > span {
+    .mural-section-long__title > span {
         width: 3rem;
         height: 3rem;
     }
@@ -410,7 +406,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         grid-template-rows: repeat(5, 1fr);
         background: linear-gradient(to right, var(--secondary) 40%, var(--white) 40%);
     }
-    .mural-section__title {
+    .mural-section-long__title {
         margin: 0;
         grid-column-start: 1;
         grid-column-end: 2;

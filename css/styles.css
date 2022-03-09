@@ -128,7 +128,7 @@ header {
     height: 100vh;
     top: 0;
     right: 0;
-    z-index: 4;
+    z-index: 10;
 }
 .header-menu > .header-menu__vertical > .header-menu__vertical--open {
     display: flex;

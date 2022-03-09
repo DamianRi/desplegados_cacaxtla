@@ -1,53 +1,137 @@
 import { readDatabase } from './database.js';
 
-const WIDTH_DESKTOP = 768;
-const main = document.getElementsByTagName("main")[0];
-main.onload = loadContent();
-
+var DATABASE = {}
 let IMAGE_TILES = ''
 let LINE_TILES = ''
 let IMAGE_LOCATION = ''
 let WIDTH = 1
 let HEIGHT = 1
 let TILES = []
+const WIDTH_DESKTOP = 768;
+const main = document.getElementsByTagName("main")[0];
+main.onload = loadContent();
 
+/**
+ * Reads the database json and the load the mural info in the main section
+ */
 async function loadContent() {
     let url = window.location.search;
     let params = new URLSearchParams(url);
     let sectionIndex = params.get("section") - 1;
-    let database = await readDatabase();
-    let sections = database.sections;
-    let murals = sections[sectionIndex]['murales'];
-    let muralInfo = murals[0];
-    IMAGE_TILES = muralInfo['source-image'];
-    LINE_TILES = muralInfo['source-line'];
-    let imageLocation = muralInfo['source-isometric'];
+    DATABASE = await readDatabase();
+    loadMural(sectionIndex, 0);
+}
+/**
+ * Loads the mural into the main section
+ *
+ * @param {number} indexSection 
+ * @param {number} indexMural 
+ */
+function loadMural(indexSection, indexMural) {
+    let section = getSection(indexSection);
+    let mural = getMural(indexSection, indexMural);
+    IMAGE_TILES = mural['source-image'];
+    LINE_TILES = mural['source-line'];
     if (main.offsetWidth >= WIDTH_DESKTOP) {
-        IMAGE_LOCATION = '../img/isometricos/desktop/' + imageLocation;
+        IMAGE_LOCATION = '../img/isometricos/desktop/' + mural['source-isometric'];
     } else {
-        IMAGE_LOCATION = '../img/isometricos/mobile/' + imageLocation;
+        IMAGE_LOCATION = '../img/isometricos/mobile/' + mural['source-isometric'];
     }
-    console.log('Location ', IMAGE_LOCATION);
-    WIDTH = parseFloat(muralInfo['width']);
-    HEIGHT = parseInt(muralInfo['height']);
+    WIDTH = mural['width'];
+    HEIGHT = mural['height'];
     TILES = [
-        { // original
-            type:       openSeaDragonType,
-            width:      WIDTH,
-            height:     HEIGHT,
-            tilesUrl:   `..${IMAGE_TILES}`
+        {
+            type: openSeaDragonType,
+            width: WIDTH, 
+            height: HEIGHT,
+            tilesUrl: '..' + IMAGE_TILES 
         },
-        { // line
-            type:       openSeaDragonType,
-            width:      WIDTH,
-            height:     HEIGHT,
-            tilesUrl:   `..${LINE_TILES}`
+        {
+            type: openSeaDragonType,
+            width: WIDTH, 
+            height: HEIGHT,
+            tilesUrl: '..' + LINE_TILES 
         }
     ]
+    let sectionName = section['name'];
+    let title = mural['name'];
+    let descriptions = mural['description'];
+    let credits = mural['credits'];
+    loadMuralTitleSection(sectionName);
+    loadMuralTitle(title);
+    loadMuralDescription(descriptions)
     loadMuralImageLocation(IMAGE_LOCATION);
+    loadMuralCredit(credits)
     createSeadragonViewer("mural-image", TILES);
 }
 
+/**
+ * Gets the section info from the database.
+ *
+ * @param {number} indexSection 
+ * @returns the section object
+ */
+function getSection(indexSection) {
+    let sections = DATABASE['sections'];
+    return sections[indexSection];
+}
+/**
+ * Gets the mural info from a section info.
+ *
+ * @param {number} indexSection
+ * @param {number} indexMural
+ * @returns the mural object
+ */
+function getMural(indexSection, indexMural) {
+    let section = getSection(indexSection);
+    return section['murales'][indexMural];
+}
+/**
+ * Sets the content to the title section
+ *
+ * @param {string} sectionName 
+ */
+function loadMuralTitleSection(sectionName) {
+    const titleSection = document.getElementsByClassName("mural-title-section")[0];
+    titleSection.innerHTML = sectionName;    
+}
+/**
+ * Sets the content in the mural title
+ *
+ * @param {string} titleText 
+ */ 
+function loadMuralTitle (titleText) {
+    const titleSections = document.getElementsByClassName("mural-title");
+    for (const title of titleSections) {
+        title.innerHTML = titleText
+    }
+}
+/**
+ * Sets the content for the description info in the mural
+ *
+ * @param {string[]} descriptions 
+ */
+function loadMuralDescription (descriptions) {
+    const description = document.getElementsByClassName("mural-section__description")[0];
+    let html = "";
+    for (const text of descriptions) {
+        html += "<p>" + text + "</p><br>";
+    }
+    description.innerHTML = html;
+}
+/**
+ * Sets the content to the credit info mural
+ * @param {string} creditText 
+ */
+function loadMuralCredit (creditText) {
+    const credit = document.getElementsByClassName("mural-section__credits")[0];
+    credit.innerHTML = creditText;
+}
+/**
+ * Sets the src to the image location for the mural
+ *
+ * @param {string} imageSrc 
+ */
 function loadMuralImageLocation (imageSrc) {
     const imageLocation = document.getElementsByClassName("mural-section__location-image")[0];
     let pictureElement = imageLocation.children[0];
@@ -70,6 +154,7 @@ function createSeadragonViewer(elementId, tiles) {
 }
 
 // Configurations to use the openseadragon
+
 const openSeaDragonType = "zoomifytileservice"; 
 const prefixURLIcons = "../img/icons/32/"; 
 const navIcons = {
