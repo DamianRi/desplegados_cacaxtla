@@ -462,6 +462,11 @@ div#mural-toolbar.mural-toolbar>div>div {
         width: var(--height-portrait-mural);
         height: 100%;
     }
+    .mural__slide {
+        width: 41rem;
+        margin:0;
+        left: calc(50% - 20.5rem);
+    }
 }
 @media screen and (orientation: landscape) and (min-width: 992px) {
     .mural-info {

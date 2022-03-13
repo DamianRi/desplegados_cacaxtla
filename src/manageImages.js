@@ -173,7 +173,7 @@ function loadSlide(section, indexSection) {
         figure.setAttribute("muralIndex", index);
 
         let image = document.createElement("img");
-        image.setAttribute("src", `/img/stamps/${mural["source-stamp"]}`);
+        image.setAttribute("src", `../img/stamps/${mural["source-stamp"]}`);
         image.setAttribute("alt", mural["name"]);
         figure.appendChild(image);
 
