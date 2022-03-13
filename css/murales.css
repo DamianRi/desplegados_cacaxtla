@@ -1,3 +1,43 @@
+.mural__slide {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25rem;
+    height: 12rem;
+    margin: 0 0 2rem 1rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    z-index: 3;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.mural__slide > figure > img {
+    display: block;
+    width: 15rem;
+    height: 9rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    scroll-snap-align: center;
+}
+.mural__slide > figure {
+    margin-right: 1rem;
+}
+.mural__slide > figure:first-child {
+    margin-left: 5rem;
+}
+.mural__slide > figure:last-child {
+    margin-right: 5rem;
+}
+.mural__slide > figure > figcaption {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--white);
+    height: 2.8rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-color: var(--primary-soft);
+}
 .mural-info {
     position: absolute;
     top: 0;
@@ -263,6 +303,27 @@ div#mural-toolbar.mural-toolbar>div>div {
     .mural-image.fullpage{
         left: 0;
     }
+    .mural__slide > figure > img {
+        width: 10rem;
+        height: 6rem;
+        margin-right: 0 0.5rem;
+    }
+    .mural__slide > figure:first-child {
+        margin-left: 5rem;
+    }
+    .mural__slide > figure:last-child {
+        margin-right: 5rem;
+    }
+    .mural__slide > figure > figcaption {
+        font-size: 0.8rem;
+    }
+    .mural__slide {
+        bottom: 0;
+        left: calc(50% - 10rem);
+        width: 20rem;
+        height: 8rem;
+        margin: 0 0 0.5rem 0;
+    }
 }
 @media screen and (orientation: portrait) and (min-width: 600px) {
     .mural-section.short {
@@ -317,7 +378,18 @@ div#mural-toolbar.mural-toolbar>div>div {
     }
     .mural-image{
         top: var(--mural-section-short);
-    }    
+    }
+    .mural__slide {
+        width: 41rem;
+        margin:0;
+        left: calc(50% - 20.5rem);
+    }
+    .mural__slide > figure:first-child {
+        margin-left: 1rem;
+    }
+    .mural__slide > figure:last-child {
+        margin-right: 1rem;
+    }
 }
 @media screen and (orientation: landscape) and (min-height: 600px) {
     @keyframes fadeInAnimation {
@@ -442,6 +514,17 @@ div#mural-toolbar.mural-toolbar>div>div {
     .mural-image {
         position: relative;
         left: 0;
+    }
+    .mural__slide {
+        width: 41rem;
+        margin: 0;
+        left: calc(50% - 20rem);
+    }
+    .mural__slide > figure:first-child {
+        margin-left: 1rem;
+    }
+    .mural__slide > figure:last-child {
+        margin-right: 1rem;
     }
 }
 

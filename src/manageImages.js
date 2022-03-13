@@ -19,7 +19,7 @@ async function loadContent() {
     let params = new URLSearchParams(url);
     let sectionIndex = params.get("section") - 1;
     DATABASE = await readDatabase();
-    loadMural(sectionIndex, 0);
+    loadMural(sectionIndex, 0, true);
 }
 /**
  * Loads the mural into the main section
@@ -27,7 +27,7 @@ async function loadContent() {
  * @param {number} indexSection 
  * @param {number} indexMural 
  */
-function loadMural(indexSection, indexMural) {
+function loadMural(indexSection, indexMural, reloadSlide) {
     let section = getSection(indexSection);
     let mural = getMural(indexSection, indexMural);
     IMAGE_TILES = mural['source-image'];
@@ -61,8 +61,9 @@ function loadMural(indexSection, indexMural) {
     loadMuralTitle(title);
     loadMuralDescription(descriptions)
     loadMuralImageLocation(IMAGE_LOCATION);
-    loadMuralCredit(credits)
-    createSeadragonViewer("mural-image", TILES);
+    loadMuralCredit(credits);
+    if (reloadSlide) loadSlide(section, indexSection);
+    createSeadragonViewer("mural-image", "mural-toolbar", TILES);
 }
 
 /**
@@ -87,13 +88,25 @@ function getMural(indexSection, indexMural) {
     return section['murales'][indexMural];
 }
 /**
+ * Removes all the children from the element
+ *
+ * @param {HTMLDOMElement} element
+ */
+function removeAllChildren (element) {
+    while (element.hasChildNodes()) {
+        element.removeChild(element.firstChild);
+    }
+}
+/**
  * Sets the content to the title section
  *
  * @param {string} sectionName 
  */
 function loadMuralTitleSection(sectionName) {
     const titleSection = document.getElementsByClassName("mural-title-section")[0];
-    titleSection.innerHTML = sectionName;    
+    removeAllChildren(titleSection);
+    let title = document.createTextNode(sectionName);
+    titleSection.appendChild(title);
 }
 /**
  * Sets the content in the mural title
@@ -101,31 +114,38 @@ function loadMuralTitleSection(sectionName) {
  * @param {string} titleText 
  */ 
 function loadMuralTitle (titleText) {
-    const titleSections = document.getElementsByClassName("mural-title");
-    for (const title of titleSections) {
-        title.innerHTML = titleText
+    const titleElements = document.getElementsByClassName("mural-title");
+    for (const titleElement of titleElements) {
+        removeAllChildren(titleElement);
+        titleElement.innerHTML = titleText;
     }
 }
 /**
  * Sets the content for the description info in the mural
  *
- * @param {string[]} descriptions 
+ * @param {string[]} paragraphTexts
  */
-function loadMuralDescription (descriptions) {
-    const description = document.getElementsByClassName("mural-section__description")[0];
-    let html = "";
-    for (const text of descriptions) {
-        html += "<p>" + text + "</p><br>";
+function loadMuralDescription (paragraphTexts) {
+    const descriptionElement = document.getElementsByClassName("mural-section__description")[0];
+    removeAllChildren(descriptionElement);
+    let paragraph;
+    for (const string of paragraphTexts) {
+        paragraph = document.createElement("p");
+        paragraph.appendChild(document.createTextNode(string));
+        descriptionElement.appendChild(paragraph);
+        descriptionElement.appendChild(document.createElement("br"));
     }
-    description.innerHTML = html;
+    descriptionElement.removeChild(descriptionElement.lastChild);
 }
 /**
  * Sets the content to the credit info mural
  * @param {string} creditText 
  */
 function loadMuralCredit (creditText) {
-    const credit = document.getElementsByClassName("mural-section__credits")[0];
-    credit.innerHTML = creditText;
+    const creditElement = document.getElementsByClassName("mural-section__credits")[0];
+    removeAllChildren(creditElement);
+    let string = document.createTextNode(creditText);
+    creditElement.appendChild(string);
 }
 /**
  * Sets the src to the image location for the mural
@@ -134,20 +154,69 @@ function loadMuralCredit (creditText) {
  */
 function loadMuralImageLocation (imageSrc) {
     const imageLocation = document.getElementsByClassName("mural-section__location-image")[0];
-    let pictureElement = imageLocation.children[0];
-    let imageElement = pictureElement.children[0];
+    let pictureElement = imageLocation.firstElementChild;
+    let imageElement = pictureElement.firstElementChild;
     imageElement.setAttribute("src", imageSrc);
 }
+/**
+ * Loads the images in the slide
+ *
+ * @param {object} section
+ */
+function loadSlide(section, indexSection) {
+    console.log(section, indexSection);
+    const muralSlide = document.getElementsByClassName("mural__slide")[0];
+    let murales = section["murales"];
+    let index = 0;
+    for (const mural of murales) {
+        let figure = document.createElement("figure");
+        figure.setAttribute("muralIndex", index);
 
-function createSeadragonViewer(elementId, tiles) {
+        let image = document.createElement("img");
+        image.setAttribute("src", `/img/stamps/${mural["source-stamp"]}`);
+        image.setAttribute("alt", mural["name"]);
+        figure.appendChild(image);
+
+        let figcaption = document.createElement("figcaption");
+        figcaption.appendChild(document.createTextNode(mural["name"]));
+        figure.appendChild(figcaption);
+        figure.addEventListener("click", function() { changeMural(this, indexSection) });
+
+        muralSlide.appendChild(figure);
+        index++;
+    }
+}
+/**
+ * Loads all the information based on the element clicked in the slide
+ *
+ * @param {HTMLDOMElement} stamp
+ * @param {string} indexSection
+ */
+function changeMural(stamp, indexSection) {
+    let muralIndex = stamp.getAttribute("muralIndex");
+    muralIndex = parseInt(muralIndex);
+    loadMural(indexSection, muralIndex, false);
+}
+/**
+ * Loads in a new canvas component by openseadragon to render the mural image
+ *
+ * @param {string} muralContentId
+ * @param {string} muralToolbarId
+ * @param {object} tiles
+ */
+function createSeadragonViewer(muralContentId, muralToolbarId, tiles) {
+    let divContent = document.getElementById(muralContentId);
+    removeAllChildren(divContent);
+    let toolbar = document.getElementById(muralToolbarId);
+    removeAllChildren(toolbar);
     OpenSeadragon({
-        id: elementId,
+        id: muralContentId,
         prefixUrl: prefixURLIcons,
         navImages: navIcons,
         tileSources: tiles,
         showNavigator: true,
         navigatorPosition: 'TOP_RIGHT',
-        toolbar: 'mural-toolbar',
+        toolbar: muralToolbarId,
         sequenceMode: true,
         preserveViewport: true
     });

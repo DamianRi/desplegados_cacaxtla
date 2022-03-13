@@ -26,7 +26,6 @@
             <div class="murales">
                 <a href="http://www.pinturamural.esteticas.unam.mx/" target="_blank" rel="noopener noreferrer">
                     <picture>
-                        <!-- Se deberá cargar dinámicamente la fuente a considerar según el mural cargado -->
                         <source media="(min-width: 992px)" srcset="../img/logos/logo_mural_desktop.png">
                         <img src="../img/logos/logo_mural_movil_update.png" alt="Logo Mural Prehispánico" title="Mural Prehispánico">
                     </picture>
@@ -64,23 +63,26 @@
             </div>
             <div id="mural-section-long" class="mural-section long inactive">
                 <div class="mural-section-long__title">
-                    <p class="mural-title-section"></p>
-                    <h2 class="mural-title"></h2>
+                    <p class="mural-title-section"><!-- Contenido cargado dinamicamente --></p>
+                    <h2 class="mural-title"><!-- Titulo cargado dinamicamente --></h2>
                     <span id="close-section" class="close" onclick="manageMuralSectionLong()"></span>
                 </div>
                 <div class="mural-section__description justify-text">
+                    <!-- Descripción cargado dinamicamente -->
                 </div>
                 <div class="mural-section__location-image">
                     <picture>
-                        <!-- Se deberá cargar dinámicamente la fuente a considerar según el mural cargado -->
-                        <img src="" alt="Isométrico del mural"/>
+                        <!-- La fuente de imagen es cargada dinamicamente -->
+                        <img src="" alt="Isométrico del mural">
                     </picture>
                 </div>
                 <div class="mural-section__credits justify-text">
+                    <!-- Créditos cargados dinamicamente -->
                 </div>
             </div>
         </section>
-        <div id="mural-toolbar" class="mural-toolbar"></div>
+        <div id="mural-toolbar" class="mural-toolbar"><!-- Mapa de imágenes cargadas dinamicamente --> </div>
+        <div id="mural-slide" class="mural__slide"><!-- Slide cargado dinamicamente --></div>
         <section id="mural-image" class="mural-image"></section>
     </main>
     <footer>
