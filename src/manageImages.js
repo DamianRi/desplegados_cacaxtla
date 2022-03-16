@@ -1,12 +1,19 @@
 import { readDatabase } from './database.js';
 
-var DATABASE = {}
-let IMAGE_TILES = ''
-let LINE_TILES = ''
-let IMAGE_LOCATION = ''
-let WIDTH = 1
-let HEIGHT = 1
-let TILES = []
+var DATABASE = {};
+let IMAGE_TILES = '';
+let LINE_TILES = '';
+let IMAGE_LOCATION = '';
+let WIDTH = 1;
+let HEIGHT = 1;
+let TILES = [];
+let currentSection = 0;
+let currentMural = 0;
+// This are general names for murals that will be zoomed with default value 0.5
+const MURAL_DISPLACEMENT = [
+    "escalera",
+    "pilares"
+];
 const WIDTH_DESKTOP = 768;
 const main = document.getElementsByTagName("main")[0];
 main.onload = loadContent();
@@ -28,6 +35,12 @@ async function loadContent() {
  * @param {number} indexMural 
  */
 function loadMural(indexSection, indexMural, reloadSlide) {
+    if (currentSection === indexSection && currentMural === indexMural) {
+        return
+    }
+    currentSection = indexSection;
+    currentMural = indexMural;
+
     let section = getSection(indexSection);
     let mural = getMural(indexSection, indexMural);
     IMAGE_TILES = mural['source-image'];
@@ -63,7 +76,9 @@ function loadMural(indexSection, indexMural, reloadSlide) {
     loadMuralImageLocation(IMAGE_LOCATION);
     loadMuralCredit(credits);
     if (reloadSlide) loadSlide(section, indexSection);
-    createSeadragonViewer("mural-image", "mural-toolbar", TILES);
+    let displacement = MURAL_DISPLACEMENT.some(name => new RegExp(name, 'i').test(title))
+    let zoomLevel = displacement ? 0.5 : 1;
+    createSeadragonViewer("mural-image", "mural-toolbar", TILES, zoomLevel);
 }
 
 /**
@@ -204,7 +219,7 @@ function changeMural(stamp, indexSection) {
  * @param {string} muralToolbarId
  * @param {object} tiles
  */
-function createSeadragonViewer(muralContentId, muralToolbarId, tiles) {
+function createSeadragonViewer(muralContentId, muralToolbarId, tiles, zoomLevel = 1) {
     let divContent = document.getElementById(muralContentId);
     removeAllChildren(divContent);
     let toolbar = document.getElementById(muralToolbarId);
@@ -218,7 +233,8 @@ function createSeadragonViewer(muralContentId, muralToolbarId, tiles) {
         navigatorPosition: 'TOP_RIGHT',
         toolbar: muralToolbarId,
         sequenceMode: true,
-        preserveViewport: true
+        preserveViewport: true,
+        defaultZoomLevel: zoomLevel,
     });
 }
 

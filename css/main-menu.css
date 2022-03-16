@@ -28,13 +28,13 @@
 .main-menu__item {
     position: absolute;
     display: flex;
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 9rem;
     font-size: 1.2rem;
     font-weight: bold;
     background-color: var(--font-color);
-    border: 1rem solid var(--secondary);
+    border: 0.8rem solid var(--secondary);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: clip;
@@ -68,9 +68,9 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 14px solid var(--secondary);
+    border-left: 0.8rem solid transparent;
+    border-right: 0.8rem solid transparent;
+    border-top: 1.2rem solid var(--secondary);
 }
 .shake {
     animation-name: shake;
@@ -85,7 +85,7 @@
         transform: translate(0, -1px);
     }
     35% {
-        transform: translate(0, 3px);
+        transform: translate(0, 2px);
     }
     50% {
         transform: translate(0, -1px);
@@ -95,46 +95,47 @@
     }
 }
 .menu-item-1__triangule {
-    animation-delay: 0.25s;
-    top: 21.25%;
-    left: 32.5%;
+    animation-delay: 0.2s;
+    top: 18%;
+    left: 35%;
 }
 .menu-item-2__triangule {
-    animation-delay: 0.5s;
-    top: 45%;
-    left: 53%;
+    animation-delay: 0.4s;
+    top: 42%;
+    left: 54%;
 }
 .menu-item-3__triangule {
-    animation-delay: 1.2s;
-    top: 63.5%;
-    left: 49.5%;
+    animation-delay: 0.6s;
+    top: 60%;
+    left: 50%;
 }
 .menu-item-4__triangule {
-    animation-delay: 1.75s;
-    top: 11%;
-    left: 41.5%;
+    animation-delay: 0.8s;
+    top: 10%;
+    left: 42%;
 }
 .main-menu__item.item-1 {
     animation-delay: 0.25s;
-    top: 9%;
-    left: 30.75%;
+    top: 10.125%;
+    left: 33.72%;
 }
 .main-menu__item.item-2 {
     animation-delay: 0.5s;
-    top: 32.25%;
-    left: 51.3%;
+    top: 34.125%;
+    left: 53%;
 }
 .main-menu__item.item-3 {
     animation-delay: 1.2s;
-    top: 50.75%;
-    left: 48%;
+    top: 52.125%;
+    left: 49%;
 }
 .main-menu__item.item-4 {
     animation-delay: 1.75s;
-    top: -1.5%;
-    left: 40%;
+    top: 1.75%;
+    left: 40.75%;
 }
 .main-menu__item.main-menu__item--open {
+    height: 3.2rem;
     padding: 0;
     z-index: 3;
     border: 0.4rem solid var(--secondary);
@@ -167,9 +168,9 @@
         object-fit: contain;
     }
     .main-menu__item {
-        width: 4rem;
-        height: 4rem;
-        border: 1.2rem solid var(--secondary);
+        width: 3.2rem;
+        height: 3.2rem;
+        border: 1rem solid var(--secondary);
         border-radius: 9rem;
         font-size: 1.4rem;
     }
@@ -179,37 +180,42 @@
     .main-menu__item > div {
         padding: 0.5rem;
     }
+    .triangule {
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-top: 1.4rem solid var(--secondary);
+    }
     .menu-item-1__triangule {
-        top: 21.5%;
-        left: 33%;
+        top: 20%;
+        left: 35%;
     }
     .menu-item-2__triangule {
-        top: 45.5%;
+        top: 43%;
         left: 53%;
     }
     .menu-item-3__triangule {
-        top: 64%;
+        top: 62%;
         left: 50.5%;
     }
     .menu-item-4__triangule {
-        top: 11.5%;
-        left: 41.5%;
+        top: 10%;
+        left: 42%;
     }
     .main-menu__item.item-1 {
-        top: 9%;
-        left: 30.8%;
+        top: 11%;
+        left: 33.75%;
     }
     .main-menu__item.item-2 {
-        top: 33.1%;
-        left: 50.75%;
+        top: 33.8%;
+        left: 51.75%;
     }
     .main-menu__item.item-3 {
-        top: 51.5%;
-        left: 48.25%;
+        top: 53%;
+        left: 49%;
     }
     .main-menu__item.item-4 {
-        top: -0.9%;
-        left: 39.5%;
+        top: 1%;
+        left: 40.75%;
     }
     .main-menu__item.item-1.main-menu__item--open {
         width: 29.76rem;
@@ -241,36 +247,39 @@
         max-width: 75rem;
         object-fit: contain;
     }
+    .main-menu__item.main-menu__item--open {
+        height: 3.6rem;
+    }
     .menu-item-1__triangule {
-        top: 23.75%;
-        left: 33.75%;
+        top: 21%;
+        left: 36.5%;
     }
     .menu-item-2__triangule {
-        top: 46.4%;
+        top: 45%;
         left: 54.25%;
     }
     .menu-item-3__triangule {
-        top: 65.5%;
+        top: 65%;
         left: 51.25%;
     }
     .menu-item-4__triangule {
         top: 12%;
-        left: 41.75%;
+        left: 42%;
     }
     .main-menu__item.item-1 {
-        top: 16.25%;
-        left: 32.5%;
+        top: 15.25%;
+        left: 35.7%;
     }
     .main-menu__item.item-2 {
-        top: 39%;
-        left: 53%;
+        top: 39.6%;
+        left: 53.4%;
     }
     .main-menu__item.item-3 {
-        top: 58%;
-        left: 50%;
+        top: 59.4%;
+        left: 50.4%;
     }
     .main-menu__item.item-4 {
-        top: 4.5%;
-        left: 40.5%;
+        top: 6.5%;
+        left: 41.25%;
     }
 }

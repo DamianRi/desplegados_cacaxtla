@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     width: 25rem;
-    height: 12rem;
+    height: 13.2rem;
     margin: 0 0 2rem 1rem;
     border-radius: 0.5rem;
     background-color: transparent;
@@ -31,10 +31,12 @@
     margin-right: 5rem;
 }
 .mural__slide > figure > figcaption {
+    padding: 0.25rem 0;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--white);
-    height: 2.8rem;
+    height: 4.2rem;
+    width: 15rem;
     border-radius: 0 0 0.5rem 0.5rem;
     background-color: var(--primary-soft);
 }
@@ -316,12 +318,13 @@ div#mural-toolbar.mural-toolbar>div>div {
     }
     .mural__slide > figure > figcaption {
         font-size: 0.8rem;
+        width: 10rem;
     }
     .mural__slide {
         bottom: 0;
         left: calc(50% - 10rem);
         width: 20rem;
-        height: 8rem;
+        height: 10rem;
         margin: 0 0 0.5rem 0;
     }
 }
@@ -416,7 +419,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         padding: 0.2rem 0.4rem 2rem 0.4rem;
         height: 80vh;
         width: var(--mural-section-short);
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         text-align: right;
