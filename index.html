@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="./css/desktop.css" media="only screen and (min-width: 992px)">
 </head>
 <body>
+    <div class="modal__background">
+        <section class="modal__notice">
+            <p class="modal__title">Aviso de privacidad</p>
+            <p class="modal__description">Descripción</p>
+            <button onclick="hideModal()">Entendido</button>
+        </section>
+    </div>
     <header>
         <div class="header-logos">
             <div class="unam">
@@ -35,7 +42,7 @@
             </div>
         </div>
         <div class="header-title">
-            <h1 onclick="redirectToHome()">Desplegados del Catálogo de Cacaxtla</h1>
+            <h1>Desplegados del Catálogo de Cacaxtla</h1>
         </div>
         <div class="header-menu">
             <span class="header-menu__icon" onclick="manageMenu()"></span>
@@ -119,5 +126,6 @@
     <script src="./src/openseadragon/openseadragon.js"></script>
     <script src="./src/menu.js"></script>
     <script src="./src/route.js"></script>
+    <script src="./src/modal.js"></script>
 </body>
 </html>

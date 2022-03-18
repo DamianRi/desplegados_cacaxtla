@@ -7,8 +7,8 @@ let IMAGE_LOCATION = '';
 let WIDTH = 1;
 let HEIGHT = 1;
 let TILES = [];
-let currentSection = 0;
-let currentMural = 0;
+let currentSection = -1;
+let currentMural = -1;
 // This are general names for murals that will be zoomed with default value 0.5
 const MURAL_DISPLACEMENT = [
     "escalera",
@@ -179,7 +179,6 @@ function loadMuralImageLocation (imageSrc) {
  * @param {object} section
  */
 function loadSlide(section, indexSection) {
-    console.log(section, indexSection);
     const muralSlide = document.getElementsByClassName("mural__slide")[0];
     let murales = section["murales"];
     let index = 0;

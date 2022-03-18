@@ -12,11 +12,11 @@ html {
 :root {
     --primary: #333333;
     --primary-soft: #33333380;
-    --secondary: #00ACCD;
+    --secondary: #00accd;
     --secondary-dark: #0088a3ff;
-    --secondary-light: rgb(161, 217, 228);
-    --font-color: #FFF9FB;
-    --font-color-secondary: #D8D5DB;
+    --secondary-light: #a1d9e4;
+    --font-color: #fff9fb;
+    --font-color-secondary: #d8d5db;
     --white: #fff;
     --black: #171717;
 
@@ -139,7 +139,8 @@ header {
     max-width: 45rem;
     height: 100vh;
     padding: 2rem 0;
-    background-color: var(--primary);
+    background-color: var(--primary-soft);
+    backdrop-filter: blur(3rem);
 }
 .header-menu > .header-menu__vertical > .menu--opaque {
     width: calc(100% - 40rem);
