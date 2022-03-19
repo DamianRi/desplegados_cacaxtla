@@ -139,8 +139,7 @@ header {
     max-width: 45rem;
     height: 100vh;
     padding: 2rem 0;
-    background-color: var(--primary-soft);
-    backdrop-filter: blur(3rem);
+    background-color: var(--primary);
 }
 .header-menu > .header-menu__vertical > .menu--opaque {
     width: calc(100% - 40rem);
