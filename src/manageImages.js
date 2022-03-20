@@ -184,13 +184,20 @@ function loadSlide(section, indexSection) {
     let index = 0;
     for (const mural of murales) {
         let figure = document.createElement("figure");
+        figure.classList.add("slide__figure");
+        if (index === 0) {
+            figure.classList.add("active");
+        }
+        if (index >= 2) {
+            figure.classList.add("inactive");
+        }
         figure.setAttribute("muralIndex", index);
-
+        
         let image = document.createElement("img");
         image.setAttribute("src", `../img/stamps/${mural["source-stamp"]}`);
         image.setAttribute("alt", mural["name"]);
         figure.appendChild(image);
-
+        
         let figcaption = document.createElement("figcaption");
         figcaption.appendChild(document.createTextNode(mural["name"]));
         figure.appendChild(figcaption);
@@ -198,6 +205,65 @@ function loadSlide(section, indexSection) {
 
         muralSlide.appendChild(figure);
         index++;
+    }
+    // ONly when there are more than two stamps
+    // display the slide 
+    MURAL_COUNT = Array.from(murales).length;
+    if (MURAL_COUNT > STAMPS_BY_SECTION) {
+        addLeftRightSlide(muralSlide);
+    }
+}
+
+let SLIDE_SECTION_MIN = 0;
+let SLIDE_SECTION_MAX = 1;
+let STAMPS_BY_SECTION = 2;
+let MURAL_COUNT = 0;
+/**
+ * Adds the left and right buttons to slide the 'slide'
+ *
+ * @param {HTMLElement} slide 
+ */
+function addLeftRightSlide(slide) {
+    let leftButton = document.createElement("div");
+    leftButton.classList.add("slide__left-scroll");
+    leftButton.addEventListener("click", scrollSlideToLeft);
+    let rightButton = document.createElement("div");
+    rightButton.addEventListener("click", scrollSlideToRight);
+    rightButton.classList.add("slide__right-scroll");
+    slide.appendChild(leftButton);
+    slide.appendChild(rightButton);
+}
+/**
+ * Sets the values for the indexes to display the stamps
+ * inside the slide. Decrease de min and max indexes
+ */
+function scrollSlideToLeft() {
+    SLIDE_SECTION_MIN = ((SLIDE_SECTION_MIN - STAMPS_BY_SECTION) + MURAL_COUNT) % MURAL_COUNT;
+    SLIDE_SECTION_MAX = ((SLIDE_SECTION_MAX - STAMPS_BY_SECTION) + MURAL_COUNT) % MURAL_COUNT;
+    scrollSlide()
+}
+/**
+ * Sets the values for the indexes to display the stamps
+ * inside the slide. Increase de min and max indexes
+ */
+function scrollSlideToRight() {
+    SLIDE_SECTION_MIN = (SLIDE_SECTION_MIN + STAMPS_BY_SECTION) % MURAL_COUNT;
+    SLIDE_SECTION_MAX = (SLIDE_SECTION_MAX + STAMPS_BY_SECTION) % MURAL_COUNT;
+    scrollSlide()
+}
+/**
+ * Inactives all the stamps in the slide that are not between the range
+ * of the min and max index
+ */
+function scrollSlide() {
+    let slideStamps = document.getElementsByClassName("slide__figure");
+    for (const stamp of slideStamps) {
+        let muralIndex = stamp.getAttribute("muralIndex");
+        stamp.classList.add("inactive");
+        // Only active the next items
+        if (SLIDE_SECTION_MIN <= muralIndex && muralIndex <= SLIDE_SECTION_MAX) {
+            stamp.classList.remove("inactive");
+        }
     }
 }
 /**
@@ -207,9 +273,21 @@ function loadSlide(section, indexSection) {
  * @param {string} indexSection
  */
 function changeMural(stamp, indexSection) {
+    clearStampActives();
+    stamp.classList.add("active");
     let muralIndex = stamp.getAttribute("muralIndex");
     muralIndex = parseInt(muralIndex);
     loadMural(indexSection, muralIndex, false);
+}
+/**
+ * Removes the 'active' class for the 'slide__figure' elements,
+ * these are the elements inside the slice element.
+ */
+function clearStampActives() {
+    let sliceStamps = document.getElementsByClassName("slide__figure");
+    let sliceStampActives = Array.from(sliceStamps)
+        .filter(stamp => stamp.classList.contains("active"));
+    sliceStampActives.forEach(stamp => { stamp.classList.remove("active") });
 }
 /**
  * Loads in a new canvas component by openseadragon to render the mural image
