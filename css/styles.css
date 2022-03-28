@@ -10,9 +10,9 @@ html {
 }
 
 :root {
-    --primary: #333333;
+    --primary: #202020;
     --primary-soft: #33333380;
-    --secondary: #00accd;
+    --secondary: #00d2fc;
     --secondary-dark: #0088a3ff;
     --secondary-light: #a1d9e4;
     --font-color: #fff9fb;
