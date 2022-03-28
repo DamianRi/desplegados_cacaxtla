@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     width: 20rem;
-    height: 12rem;
+    height: 12.4rem;
     margin: 0 0 0.8rem 2.4rem;
     border-radius: 0.5rem;
     background-color: transparent;
@@ -21,7 +21,7 @@
 }
 .mural__slide > .slide__figure.active {
     border-radius: 0.5rem;
-    /* box-shadow: 0 0 0 0.3rem var(--secondary); */
+    box-shadow: 0 0 0 0.3rem var(--secondary);
 }
 .mural__slide > .slide__figure.inactive {
     display: block;
@@ -48,11 +48,6 @@
     width: 12.5rem;
     border-radius: 0 0 0.5rem 0.5rem;
     background-color: var(--primary-soft);
-}
-.mural__slide > .slide__figure.active > figcaption {
-    font-weight: bold;
-    color: var(--black);
-    background-color: var(--secondary);
 }
 .mural-info {
     position: absolute;
