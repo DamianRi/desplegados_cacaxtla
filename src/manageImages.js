@@ -172,6 +172,9 @@ function loadMuralImageLocation (imageSrc) {
     let pictureElement = imageLocation.firstElementChild;
     let imageElement = pictureElement.firstElementChild;
     imageElement.setAttribute("src", imageSrc);
+    imageElement.addEventListener("contextmenu", function(e){
+        e.preventDefault();
+    });
 }
 /**
  * Loads the images in the slide
@@ -196,6 +199,9 @@ function loadSlide(section, indexSection) {
         let image = document.createElement("img");
         image.setAttribute("src", `../img/stamps/${mural["source-stamp"]}`);
         image.setAttribute("alt", mural["name"]);
+        image.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        })
         figure.appendChild(image);
         
         let figcaption = document.createElement("figcaption");
@@ -206,7 +212,7 @@ function loadSlide(section, indexSection) {
         muralSlide.appendChild(figure);
         index++;
     }
-    // ONly when there are more than two stamps
+    // Only when there are more than two stamps
     // display the slide 
     MURAL_COUNT = Array.from(murales).length;
     if (MURAL_COUNT > STAMPS_BY_SECTION) {

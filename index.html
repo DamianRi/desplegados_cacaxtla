@@ -14,7 +14,9 @@
     <div class="modal__background">
         <section class="modal__notice">
             <p class="modal__title">Aviso de privacidad</p>
-            <p class="modal__description">Aquí será desplegado el aviso de privacidad con respecto a las imágenes contenidas.</p>
+            <p class="modal__description">
+                Al ingresar a este sitio y consultar el material depositado en él, usted está aceptando las condiciones estipuladas en la <em>"LICENCIA DE USO"</em> del mismo, por lo que le invitamos a leer cuidadosamente el texto completo de la misma. 
+            </p>
             <button onclick="hideModal()">Entendido</button>
         </section>
     </div>
@@ -33,7 +35,6 @@
             <div class="murales">
                 <a href="http://www.pinturamural.esteticas.unam.mx/" target="_blank" rel="noopener noreferrer">
                     <picture>
-                        <!-- Se deberá cargar dinámicamente la fuente a considerar según el mural cargado -->
                         <source media="(min-width: 992px)" srcset="img/logos/logo_mural_desktop.png">
                         <img src="./img/logos/logo_mural_movil_update.png" alt="Logo Mural Prehispánico" title="Mural Prehispánico">
                     </picture>
@@ -70,41 +71,42 @@
             <picture>
                 <source media="(max-width: 768px)" srcset="./img/isometricos/mobile/0.jpg">
                 <source media="(min-width: 768px)" srcset="./img/isometricos/desktop/0.jpg">
-                <img src="./img/isometricos/mobile/0.jpg" alt="Mapa de las ubicaciones">
+                <img class="no-download" src="./img/isometricos/mobile/0.jpg" alt="Mapa de las ubicaciones">
 
-                <div class="menu-item-1__triangule triangule"></div>
-                <div id="menu-item-1" class="main-menu__item item-1 shake"
-                    onclick="manageMenuItem(this)">
+                <div class="main-menu__item--close item-1 shake"
+                    onclick="manageMenuItem(this, 1)"></div>
+                <div class="main-menu__item--open item-1 inactive"
+                    onclick="manageMenuItem(this, 1)">
                     <p>Subestructura del Edificio B</p>
                     <div class="link-mural" onclick="redirectToMurals(1)">
                         <p>Ver</p>
                         <span></span>
                     </div>
                 </div>
-
-                <div class="menu-item-2__triangule triangule"></div>
-                <div id="menu-item-2" class="main-menu__item item-2 shake"
-                onclick="manageMenuItem(this)">
+                <div class="main-menu__item--close item-2 shake"
+                    onclick="manageMenuItem(this, 2)"></div>
+                <div class="main-menu__item--open item-2 inactive"
+                    onclick="manageMenuItem(this, 2)">
                     <p>Templo Rojo</p>
                     <div class="link-mural" onclick="redirectToMurals(2)">
                         <p>Ver</p>
                         <span></span>
                     </div>
                 </div>
-
-                <div class="menu-item-3__triangule triangule"></div>
-                <div id="menu-item-3" class="main-menu__item item-3 shake"
-                    onclick="manageMenuItem(this)">
+                <div class="main-menu__item--close item-3 shake"
+                    onclick="manageMenuItem(this, 3)"></div>
+                <div class="main-menu__item--open item-3 inactive"
+                    onclick="manageMenuItem(this, 3)">
                     <p>Templo de Venus</p>
                     <div class="link-mural" onclick="redirectToMurals(3)">
-                        <p>Ver</p> 
+                        <p>Ver</p>
                         <span></span>
                     </div>
                 </div>
-
-                <div class="menu-item-4__triangule triangule"></div>
-                <div id="menu-item-4" class="main-menu__item item-4 shake"
-                    onclick="manageMenuItem(this)">
+                <div class="main-menu__item--close item-4 shake"
+                    onclick="manageMenuItem(this, 4)"></div>
+                <div class="main-menu__item--open item-4 inactive"
+                    onclick="manageMenuItem(this, 4)">
                     <p>Edificio A</p>
                     <div class="link-mural" onclick="redirectToMurals(4)">
                         <p>Ver</p>
@@ -127,5 +129,6 @@
     <script src="./src/menu.js"></script>
     <script src="./src/route.js"></script>
     <script src="./src/modal.js"></script>
+    <script src="./src/generalConfigurations.js"></script>
 </body>
 </html>

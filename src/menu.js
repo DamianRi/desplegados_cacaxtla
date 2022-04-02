@@ -26,45 +26,54 @@
  * @param {*} currentItem: menu item clicked
  * @returns
  */
- function manageMenuItem(currentItem) {
-    if (!currentItem) return
+ function manageMenuItem(item, itemIndex) {
     // close all items previusly opened
-    let openedItems = getOpenedItems();
-    if (openedItems.length) {
-        closeMenuItems(openedItems, currentItem);
-    }
-
-    let classListItem = currentItem.classList;
-    if (classListItem.contains("main-menu__item--open")) {
-        classListItem.remove("main-menu__item--open");
-    } else if (currentItem.offsetWidth < 50){
-        classListItem.add("main-menu__item--open");
+    closeMenuItems(itemIndex);
+    
+    let itemClasses = item.classList;
+    let classesList = [
+        `item-${itemIndex}`,
+        "inactive"
+    ]
+    let itemsInactive = document.getElementsByClassName(classesList.join(" "));
+    let itemInactive = itemsInactive.length ? itemsInactive[0] : document.createElement("div");
+    if (itemClasses.contains("inactive")) {
+        itemClasses.remove("inactive");
+        itemInactive.classList.add("inactive");
+    } else {
+        itemClasses.add("inactive");
+        itemInactive.classList.remove("inactive");
     }
 }
 
 /**
  * Gets an HTMLCollection with the elements that have the
- * 'main-menu__item--open' class. All this items should be
- * only menu items.
+ * specifif class recived as parameter and that are inactive.
+ * All this items should be only menu items.
  *
  * @returns {HTMLCollection}
  */
-function getOpenedItems() {
-    let items = document.getElementsByClassName("main-menu__item--open");
-    return items;
+function getOpenedItems(byClass) {
+    let items = document.getElementsByClassName(byClass);
+    let itemsArray = Array.from(items);
+    itemsArray = itemsArray.filter((item) => !item.classList.contains("inactive"));
+    return itemsArray;
 }
 
 /**
- * Removes the class 'main-menu__item--open' for each item in the list,
- * except for the 'exceptItem'.
+ * Sets the "inactive" class to hide the components
  *
- * @param {HTMLCollection} list: of menu items opened
- * @param {object} exceptItem: item that will not remove the class
- * @returns
+ * @param {number} itemIndex: current item that not will be hi
  */
-function closeMenuItems(list, exceptItem) {
-    for (const itemOpened of list) {
-        if (itemOpened.id !== exceptItem.id)
-            itemOpened.classList.remove("main-menu__item--open");
-    }
+function closeMenuItems(itemIndex) {
+    // Display all the icons
+    let iconItems = document.getElementsByClassName("main-menu__item--close");
+    Array.from(iconItems).forEach(item => {
+        item.classList.remove("inactive");
+    });
+    // Hide all the sections opened
+    let openItems = document.getElementsByClassName("main-menu__item--open");
+    Array.from(openItems).forEach(item => {
+        item.classList.add("inactive");
+    })
 }
