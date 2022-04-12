@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCC | Murales</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/murales.css">
-    <link rel="stylesheet" href="../css/tablet.css" media="only screen and (min-width: 600px) and (min-height: 600px)">
-    <link rel="stylesheet" href="../css/desktop.css" media="only screen and (min-width: 992px)">
+    <link rel="stylesheet" href="../css/credits.css">
 </head>
 <body>
     <header>
@@ -57,34 +55,46 @@
         </div>
     </header>
     <main>
-        <section class="mural-info">
-            <div id="mural-section-short" class="mural-section short" onclick="manageMuralSectionShort()">
-                <p class="mural-title"></p>
-                <span></span>
-            </div>
-            <div id="mural-section-long" class="mural-section long inactive">
-                <div class="mural-section-long__title">
-                    <p class="mural-title-section"><!-- Contenido cargado dinamicamente --></p>
-                    <h2 class="mural-title"><!-- Titulo cargado dinamicamente --></h2>
-                    <span id="close-section" class="close" onclick="manageMuralSectionLong()"></span>
-                </div>
-                <div class="mural-section__description justify-text">
-                    <!-- Descripción cargado dinamicamente -->
-                </div>
-                <div class="mural-section__location-image">
-                    <picture onclick="manageMuralSectionLong()">
-                        <!-- La fuente de imagen es cargada dinamicamente -->
-                        <img src="" alt="Isométrico del mural">
-                    </picture>
-                </div>
-                <div class="mural-section__credits justify-text">
-                    <!-- Créditos cargados dinamicamente -->
-                </div>
+        <section class="created_by">
+            <h1>Involucrados en el desarrollodo del sitio:</h1>
+            <div class="teamwork">
+                <figure>
+                    <img src="../img/icons/50/profile.svg" alt="Imagen de perfil">
+                    <figcaption>
+                        <p>Integrante #</p>
+                        <p>Breve descripción del integrante.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../img/icons/50/profile.svg" alt="Imagen de perfil">
+                    <figcaption>
+                        <p>Integrante #</p>
+                        <p>Breve descripción del integrante.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../img/icons/50/profile.svg" alt="Imagen de perfil">
+                    <figcaption>
+                        <p>Integrante #</p>
+                        <p>Breve descripción del integrante.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../img/icons/50/profile.svg" alt="Imagen de perfil">
+                    <figcaption>
+                        <p>Integrante #</p>
+                        <p>Breve descripción del integrante.</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="../img/icons/50/profile.svg" alt="Imagen de perfil">
+                    <figcaption>
+                        <p>Integrante #</p>
+                        <p>Breve descripción del integrante.</p>
+                    </figcaption>
+                </figure>
             </div>
         </section>
-        <div id="mural-toolbar" class="mural-toolbar"><!-- Mapa de imágenes cargadas dinamicamente --> </div>
-        <div id="mural-slide" class="mural__slide"><!-- Slide cargado dinamicamente --></div>
-        <section id="mural-image" class="mural-image"></section>
     </main>
     <footer>
         <p>
@@ -95,11 +105,7 @@
         </p>
         <a href="./credits.html">Créditos</a>
     </footer>
-    <script src="../src/openseadragon/openseadragon.js"></script>
     <script src="../src/menu.js"></script>
-    <script type="module" src="../src/manageImages.js"></script>
-    <script src="../src/murals.js"></script>
     <script src="../src/route.js"></script>
-    <script src="../src/generalConfigurations.js"></script>
 </body>
 </html>
