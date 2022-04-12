@@ -43,7 +43,6 @@
     padding: 0.25rem 0.5rem;
     text-align: center;
     font-size: 1rem;
-    color: var(--white);
     height: 4.2rem;
     width: 12.5rem;
     border-radius: 0 0 0.5rem 0.5rem;
@@ -62,6 +61,7 @@
     min-height: var(--mural-section-short);
     font-size: 1.2rem;
     background-color: var(--secondary);
+    color: var(--font-color-dark);
 }
 .mural-section.short.inactive {
     display: none;
@@ -123,6 +123,7 @@
     min-height: 420px;
     background-color: var(--secondary);
     z-index: 4;
+    color: var(--font-color-dark);
 }
 .mural-section.long.inactive {
     display: none;
@@ -130,7 +131,6 @@
 .mural-section-long__title {
     padding: 2rem 0 0 2rem;
     width: 90%;
-    background-color: var(--secondary);
 }
 .mural-section-long__title h2 {
     display: inline-block;
@@ -150,7 +150,7 @@
     width: 100%;
     height: fit-content;
     padding: 0.8rem 2rem;
-    background-color: var(--white);
+    background-color: var(--bg-light);
 }
 .mural-section__location-image > picture {
     display: block;
@@ -168,8 +168,8 @@
 .mural-section__credits {
     padding: 0.4rem 2rem 2rem 2rem;
     font-size: 1rem;
-    color: var(--font-color-secondary);
     background-color: var(--primary);
+    color: var(--font-color-light);
 }
 /* Override toolbar styles with important property due to
 styles were write inline */
@@ -279,7 +279,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: fit-content(30px) auto fit-content(18%);
-        background: linear-gradient(to right, var(--secondary) 50%, var(--white) 50%);
+        background: linear-gradient(to right, var(--secondary) 50%, var(--bg-light) 50%);
     }
     .mural-section-long__title {
         padding: 2rem 2rem 1rem 2rem;
@@ -294,8 +294,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         grid-column-start: 2;
         grid-row-start: 3;
         padding: 2rem 2rem;
-        color: var(--black);
-        background-color: var(--white);
+        background-color: var(--bg-light);
     }
     .mural-section__location-image {
         grid-column-start: 2;
@@ -452,7 +451,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 10% 40% 50%;
-        background: linear-gradient(to right, var(--secondary) 50%, var(--white) 50%);
+        background: linear-gradient(to right, var(--secondary) 50%, var(--bg-light) 50%);
     }
     .mural-section__description {
         grid-column-start: 1;
@@ -496,7 +495,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         max-width: 800px;
         grid-template-columns: 40% 60%;
         grid-template-rows: repeat(5, 1fr);
-        background: linear-gradient(to right, var(--secondary) 40%, var(--white) 40%);
+        background: linear-gradient(to right, var(--secondary) 40%, var(--bg-light) 40%);
     }
     .mural-section-long__title {
         margin: 0;
@@ -575,8 +574,8 @@ div#mural-toolbar.mural-toolbar>div>div {
     }
     .mural__slide > .slide__left-scroll:hover,
     .mural__slide > .slide__right-scroll:hover {
-        background-color: var(--white-soft);
-        box-shadow: 0 0 0.2rem 0.2rem var(--primary-soft);
+        background-color: var(--bg-light-soft);
+        box-shadow: 0 0 0 0.2rem var(--primary-soft);
         transition-duration: 0.3s;
     }
     .mural__slide > .slide__left-scroll:hover {
@@ -587,6 +586,6 @@ div#mural-toolbar.mural-toolbar>div>div {
     }
     .mural__slide > .slide__left-scroll:active,
     .mural__slide > .slide__right-scroll:active {
-        background-color: var(--white);
+        background-color: var(--bg-light);
     }
 }

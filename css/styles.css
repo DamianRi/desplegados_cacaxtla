@@ -11,24 +11,24 @@ html {
 
 :root {
     --primary: #202020;
-    --primary-soft: #33333380;
+    --primary-soft: #202020cc;
     --secondary: #00d2fc;
-    --secondary-dark: #0088a3ff;
-    --secondary-light: #a1d9e4;
-    --font-color: #fff9fb;
-    --font-color-secondary: #d8d5db;
-    --white: #fff;
-    --white-soft: #ffffff80;
-    --black: #171717;
-
+    --secondary-dark: #005d6f;
+    --secondary-light: #76e8ff;
+    --font-color-light: #f1f1f1;
+    --font-color-dark: #252525;
+    --bg-light: #fff;
+    --bg-light-soft: #ffffff80;
+    
     --mural-section-short: 20px;
     --height-portrait-mural: calc(100% - var(--mural-section-short));
 }
 body {
     overflow-x: hidden;
+    color: var(--font-color-light);
 }
 a {
-    color: var(--font-color-secondary);
+    color: var(--font-color-light);
     text-decoration: none;
 }
 .justify-text {
@@ -58,7 +58,6 @@ header {
     min-height: 50px;
     padding: 0.8rem;
     background-color: var(--primary);
-    color: var(--font-color);
 }
 .header-logos {
     display: flex;
@@ -144,8 +143,7 @@ header {
 }
 .header-menu > .header-menu__vertical > .menu--opaque {
     width: calc(100% - 40rem);
-    background-color: var(--primary);
-    opacity: 0.5;
+    background-color: var(--primary-soft);
 }
 .header-menu__vertical--open > .menu__section {
     height: 3.2rem;
@@ -153,11 +151,11 @@ header {
     font-size: 1.6rem;
     font-weight: bold;
     text-align: left;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--bg-light);
     color: var(--secondary);
 }
 .header-menu__vertical--open > a:hover {
-    color: var(--black);
+    color: var(--font-color-dark);
     background-color: var(--secondary);
     transition: 0.3s;
 }
@@ -199,12 +197,12 @@ footer {
     text-align: center;
     font-weight: lighter;
     font-size: 0.8rem;
-    color: var(--font-color-secondary);
     background-color: var(--primary);
 }
 
 footer p {
     display: inline;
+    opacity: 0.4;
 }
 /* Para móviles de forma :horizontal */
 @media screen and (orientation: landscape) and (max-height: 600px) {

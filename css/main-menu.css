@@ -17,10 +17,11 @@
     width: 75%;
     height: fit-content;
     max-width: 40rem;
-    background-color: var(--white);
+    background-color: var(--bg-light);
     box-shadow: 0 0 1rem 0.5rem var(--primary);
     border-radius: 0.8rem;
     margin: 10rem auto;
+    color: var(--font-color-dark);
 }
 .modal__notice > .modal__title {
     font-size: 1.6rem;
@@ -38,11 +39,10 @@
     border: 0 none;
     border-radius: 0.4rem;
     font-size: 1.4rem;
-    color: var(--black);
     background-color: var(--secondary);
 }
 .modal__notice > button:active {
-    background-color: var(--secondary-light);
+    background-color: var(--secondary-dark);
 }
 .welcome {
     position: absolute;
@@ -51,7 +51,6 @@
     padding: 2rem;
     margin: auto;
     font-size: 1.4rem;
-    color: var(--font-color);
     opacity: 0.4;
 }
 /* Menú interactivo */
@@ -135,16 +134,18 @@
     font-size: 1.2rem;
     font-weight: bold;    
     border-radius: 1rem;
-    background-color: var(--white);
+    background-color: var(--bg-light);
     box-shadow: 0 0 0 0.4rem var(--secondary);
     z-index: 3;
 }
 .main-menu__item--open > p {
     padding: 0.4rem;
+    color: var(--font-color-dark);
 }
 .main-menu__item--open > .link-mural {
     background-color: var(--secondary);
     padding: 0.4rem;
+    color: var(--font-color-dark);
 }
 .main-menu__item--open > .link-mural > p {
     display: inline-block;
