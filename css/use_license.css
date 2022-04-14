@@ -1,0 +1,23 @@
+.use-license {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    height: 100%;
+    overflow-y: scroll;
+}
+.use-license > p:not(.use-license__title) {
+    line-height: 1.6;
+    text-align: justify;
+}
+.use-license > p > em {
+    font-weight: bold;
+}
+.use-license__title {
+    margin: 1.6rem 0;
+    font-size: 2.4rem;
+}
+.cited {
+    font-style: italic;
+    margin: 1rem 0;
+    padding: 1.6rem;
+    border-left: 4px solid var(--bg-light);
+}

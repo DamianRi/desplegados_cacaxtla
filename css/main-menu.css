@@ -32,6 +32,10 @@
     text-align: justify;
     font-size: 1.4rem;
 }
+.modal__notice > .modal__description > a {
+    color: var(--font-color-dark);
+    text-decoration: underline;
+}
 .modal__notice > button {
     width: 15rem;
     height: 3.2rem;
