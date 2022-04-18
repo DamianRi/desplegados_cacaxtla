@@ -1,40 +1,21 @@
 .created_by {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 2rem;
     width: 100%;
     height: 100%;
     margin: auto;
 }
 .created_by > h1 {
+    font-size: 1.8rem;
     padding: 0.5rem;
 }
 .teamwork {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 90%;
-    overflow-y: scroll;
     font-size: 1.2rem;
 }
-.teamwork > figure {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 45rem;
-    margin: 1rem 0 0 0;
-    padding: 1rem;
-}
-.teamwork > figure > figcaption {
-    padding: 2rem;
-}
-.teamwork > figure > img {
-    width: 40%;
-    max-width: 200px;
-    height: 100%;
-    max-height: 200px;
-    background-color: var(--bg-light);
-    border-radius: 99px;
+.teamwork > div {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    border-left: 1px solid var(--bg-light);
+    margin: 1rem 0;
 }

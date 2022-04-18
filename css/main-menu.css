@@ -36,6 +36,10 @@
     color: var(--font-color-dark);
     text-decoration: underline;
 }
+.modal__notice > .modal__description > .use_license {
+    color: var(--secondary);
+    text-decoration: none;
+}
 .modal__notice > button {
     width: 15rem;
     height: 3.2rem;
