@@ -1,0 +1,22 @@
+.legal-notice {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    height: 100%;
+    overflow-y: scroll;
+}
+.legal-notice > p:not(.legal-notice__title) {
+    line-height: 1.6;
+    text-align: justify;
+}
+.use-license > p > em {
+    font-weight: bold;
+}
+.legal-notice__title {
+    margin: 1.6rem 0;
+    font-size: 2.4rem;
+}
+.legal-notice__footer > ul {
+    font-style: italic;
+    list-style: none;
+    margin: 2rem 0 0 0;
+}
