@@ -7,16 +7,21 @@
 .legal-notice > p:not(.legal-notice__title) {
     line-height: 1.6;
     text-align: justify;
+    margin-bottom: 2rem;
 }
-.use-license > p > em {
+.legal-notice > p > em.bold {
     font-weight: bold;
+}
+.legal-notice > p > em:not(.italic) {
+    font-style: normal;
 }
 .legal-notice__title {
     margin: 1.6rem 0;
     font-size: 2.4rem;
+    font-weight: bold;
 }
 .legal-notice__footer > ul {
-    font-style: italic;
+    font-style: normal;
     list-style: none;
     margin: 2rem 0 0 0;
 }

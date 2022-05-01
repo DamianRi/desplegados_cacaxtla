@@ -33,12 +33,11 @@
     font-size: 1.4rem;
 }
 .modal__notice > .modal__description > a {
-    color: var(--font-color-dark);
+    color: var(--secondary);
     text-decoration: underline;
 }
 .modal__notice > .modal__description > .use_license {
     color: var(--secondary);
-    text-decoration: none;
 }
 .modal__notice > button {
     width: 15rem;
