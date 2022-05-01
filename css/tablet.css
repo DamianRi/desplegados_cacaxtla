@@ -1,5 +1,5 @@
 :root {
-    --mural-section-short: 30px;
+    --mural-section-short: 3.5rem;
     --height-portrait-mural: calc(100% - var(--mural-section-short));
 }
 header {

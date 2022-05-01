@@ -63,12 +63,19 @@
     background-color: var(--secondary);
     color: var(--font-color-dark);
 }
+.mural-section.short > .mural-title-section.small {
+    font-size: 1rem;
+}
+.mural-section.short > .mural-title {
+    font-weight: bold;
+}
 .mural-section.short.inactive {
     display: none;
 }
 .mural-section.short > span {
     display: inline-block;
     position: absolute;
+    margin: 0.5rem 0;
     top: 2px;
     right: 2rem;
     width: 1.4rem;
@@ -255,7 +262,7 @@ div#mural-toolbar.mural-toolbar>div>div {
          }
     }
     .mural-section.short {
-        padding: 0.2rem 0.4rem 2rem 0.4rem;
+        padding: 0.2rem 0.4rem 2.5rem 0.4rem;
         height: 100%;
         width: var(--mural-section-short);
         font-size: 1.2rem;
@@ -267,8 +274,8 @@ div#mural-toolbar.mural-toolbar>div>div {
         top: auto;
         right: 0;
         bottom: 0;
-        margin: 4px;
         transform: rotate(90deg);
+        margin: 0.75rem;
     }
     .mural-section.long {
         position: absolute;
@@ -344,13 +351,19 @@ div#mural-toolbar.mural-toolbar>div>div {
         height: var(--mural-section-short);
     }
     .mural-section.short > p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         padding: 0 0 2rem 0;
+    }
+    .mural-section.short > .mural-title-section.small{
+        font-size: 1.2rem;
+    }
+    .mural-section.short > .mural-title-section, .mural-title {
+        padding: 0;
     }
     .mural-section.short > span {
         width: 2rem;
         height: 2rem;
-        margin: 0 1rem 0 0;
+        margin: 0.5rem;
     }
     .mural-section.long{
         height: 80vh;
@@ -427,10 +440,10 @@ div#mural-toolbar.mural-toolbar>div>div {
          }
     }
     .mural-section.short {
-        padding: 0.2rem 0.4rem 2rem 0.4rem;
+        padding: 0.2rem 0.4rem 2.5rem 0.4rem;
         height: 80vh;
         width: var(--mural-section-short);
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         text-align: right;
@@ -439,7 +452,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         top: auto;
         right: 0;
         bottom: 0;
-        margin: 0.5rem;
+        margin: 0.5rem 1rem;
         transform: rotate(90deg);
     }
     .mural-section.long {

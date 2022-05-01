@@ -20,7 +20,7 @@ html {
     --bg-light: #fff;
     --bg-light-soft: #ffffff80;
     
-    --mural-section-short: 20px;
+    --mural-section-short: 3rem;
     --height-portrait-mural: calc(100% - var(--mural-section-short));
 }
 body {

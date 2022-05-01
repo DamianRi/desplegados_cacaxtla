@@ -118,10 +118,12 @@ function removeAllChildren (element) {
  * @param {string} sectionName 
  */
 function loadMuralTitleSection(sectionName) {
-    const titleSection = document.getElementsByClassName("mural-title-section")[0];
-    removeAllChildren(titleSection);
-    let title = document.createTextNode(sectionName);
-    titleSection.appendChild(title);
+    const titleSections = document.getElementsByClassName("mural-title-section");
+    for (const titleSection of titleSections) {
+        removeAllChildren(titleSection);
+        let title = document.createTextNode(sectionName);
+        titleSection.appendChild(title);
+    }
 }
 /**
  * Sets the content in the mural title
