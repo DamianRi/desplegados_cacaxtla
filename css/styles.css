@@ -166,6 +166,13 @@ header {
     padding: 1rem 4rem;
     font-size: 1.6rem;
 }
+.header-menu__vertical--open > a.submenu {
+    padding: 1rem 3rem;
+    margin-left: 4rem;
+    border-left-style: dotted;
+    border-left-width: 2px;
+    width: 90%;
+}
 .header-menu__vertical--open > .close {
     margin: 2rem 1rem;
     top: 0;
