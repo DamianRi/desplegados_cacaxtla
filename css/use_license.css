@@ -12,9 +12,6 @@
     font-weight: bold;
     font-style: normal;
 }
-.use-license > p > span.red {
-    color: red;
-}
 .use-license__title {
     margin: 1.6rem 0;
     font-size: 2.4rem;
