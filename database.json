@@ -14,7 +14,7 @@
                     "source-image": "/img/tiles/1-1-batalla-ote/",
                     "source-line": "/img/tiles/1-1-batalla-ote-dibujo/",
                     "source-isometric": "1-1.jpg",
-                    "source-stamp": "1-1.png",
+                    "source-slider": "1-1-batalla-ote.png",
                     "width": 12846,
                     "height": 2019
                 },
@@ -28,7 +28,7 @@
                     "source-image": "/img/tiles/1-2-batalla-pte/",
                     "source-line": "/img/tiles/1-2-batalla-pte-dibujo/",
                     "source-isometric": "1-2.jpg",
-                    "source-stamp": "1-2.png",
+                    "source-slider": "1-2-batalla-pte.png",
                     "width": 9875,
                     "height": 2019
                 }
@@ -48,7 +48,7 @@
                     "source-image": "/img/tiles/2-1-pasillo-serpiente-ote/",
                     "source-line": "/img/tiles/2-1-pasillo-serpiente-ote-dibujo/",
                     "source-isometric": "2-1.jpg",
-                    "source-stamp": "2-1.png",
+                    "source-slider": "2-1-pasillo-serpiente-ote.png",
                     "width": 10284,
                     "height": 2019
                 },
@@ -62,7 +62,7 @@
                     "source-image": "/img/tiles/2-2-pasillo-serpiente-pte/",
                     "source-line": "/img/tiles/2-2-pasillo-serpiente-pte-dibujo/",
                     "source-isometric": "2-2.jpg",
-                    "source-stamp": "2-2.png",
+                    "source-slider": "2-2-pasillo-serpiente-pte.png",
                     "width": 10284,
                     "height": 2019
                 },
@@ -76,7 +76,7 @@
                     "source-image": "/img/tiles/2-3-banqueta-huella/",
                     "source-line": "/img/tiles/2-3-banqueta-huella-dibujo/",
                     "source-isometric": "2-3.jpg",
-                    "source-stamp": "2-3.png",
+                    "source-slider": "2-3-banqueta-huella.png",
                     "width": 7123,
                     "height": 1748
                 },
@@ -90,7 +90,7 @@
                     "source-image": "/img/tiles/2-4-banqueta-peralte/",
                     "source-line": "/img/tiles/2-4-banqueta-peralte-dibujo/",
                     "source-isometric": "2-4.jpg",
-                    "source-stamp": "2-4.png",
+                    "source-slider": "2-4-banqueta-peralte.png",
                     "width": 7123,
                     "height": 1748
                 },
@@ -104,7 +104,7 @@
                     "source-image": "/img/tiles/2-5-escalera-oriente/",
                     "source-line": "/img/tiles/2-5-escalera-oriente-dibujo/",
                     "source-isometric": "2-5.jpg",
-                    "source-stamp": "2-5.png",
+                    "source-slider": "2-5-escalera-oriente.png",
                     "width": 4109,
                     "height": 2019
                 },
@@ -118,7 +118,7 @@
                     "source-image": "/img/tiles/2-6-escalera-pte/",
                     "source-line": "/img/tiles/2-6-escalera-pte-dibujo/",
                     "source-isometric": "2-6.jpg",
-                    "source-stamp": "2-6.png",
+                    "source-slider": "2-6-escalera-pte.png",
                     "width": 2472,
                     "height": 2019
                 }
@@ -138,7 +138,7 @@
                     "source-image": "/img/tiles/3-1-templo-venus/",
                     "source-line": "/img/tiles/3-1-templo-venus-dibujo/",
                     "source-isometric": "3-1.jpg",
-                    "source-stamp": "3-1.png",
+                    "source-slider": "3-1-templo-venus.png",
                     "width": 2955,
                     "height": 2019
                 }
@@ -158,7 +158,7 @@
                     "source-image": "/img/tiles/4-1-portico/",
                     "source-line": "/img/tiles/4-1-portico-dibujo/",
                     "source-isometric": "4-1.jpg",
-                    "source-stamp": "4-1.png",
+                    "source-slider": "4-1-portico.png",
                     "width": 7753,
                     "height": 2019
                 },
@@ -172,7 +172,7 @@
                     "source-image": "/img/tiles/4-2-serpientes-entrelazadas/",
                     "source-line": "/img/tiles/4-2-serpientes-entrelazadas-dibujo/",
                     "source-isometric": "4-2.jpg",
-                    "source-stamp": "4-2.png",
+                    "source-slider": "4-2-serpientes-entrelazadas.png",
                     "width": 8772,
                     "height": 2019
                 }

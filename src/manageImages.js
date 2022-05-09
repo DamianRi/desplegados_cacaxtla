@@ -199,7 +199,7 @@ function loadSlide(section, indexSection) {
         figure.setAttribute("muralIndex", index);
         
         let image = document.createElement("img");
-        image.setAttribute("src", `../img/stamps/${mural["source-stamp"]}`);
+        image.setAttribute("src", `../img/sliders/${mural["source-slider"]}`);
         image.setAttribute("alt", mural["name"]);
         image.addEventListener("contextmenu", function(e) {
             e.preventDefault();
