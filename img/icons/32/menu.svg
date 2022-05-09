@@ -7,7 +7,7 @@
    viewBox="0 0 8.4666667 8.4666667"
    version="1.1"
    id="svg5"
-   sodipodi:docname="menusvg.svg"
+   sodipodi:docname="menu.svg"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -26,14 +26,14 @@
      showgrid="true"
      inkscape:lockguides="false"
      inkscape:zoom="12.429181"
-     inkscape:cx="25.485124"
-     inkscape:cy="31.562084"
+     inkscape:cx="25.504496"
+     inkscape:cy="31.498455"
      inkscape:window-width="1920"
-     inkscape:window-height="1057"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="29"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1659"
+     inkscape:current-layer="g1799"
      units="px">
     <inkscape:grid
        type="xygrid"
@@ -55,7 +55,7 @@
          id="g1799"
          transform="translate(0.26458435)">
         <rect
-           style="fill:#1a1a1a;stroke-width:0.167338"
+           style="fill:#00d2fc;stroke-width:0.167338;fill-opacity:1"
            id="rect1223"
            width="6.3499999"
            height="0.52916664"
@@ -65,7 +65,7 @@
            inkscape:export-xdpi="96"
            inkscape:export-ydpi="96" />
         <rect
-           style="fill:#1a1a1a;stroke-width:0.167337"
+           style="fill:#00d2fc;stroke-width:0.167337;fill-opacity:1"
            id="rect1225"
            width="6.3499994"
            height="0.5291664"
@@ -75,7 +75,7 @@
            inkscape:export-xdpi="96"
            inkscape:export-ydpi="96" />
         <rect
-           style="fill:#1a1a1a;stroke-width:0.167337"
+           style="fill:#00d2fc;stroke-width:0.167337;fill-opacity:1"
            id="rect1654"
            width="6.3499994"
            height="0.52916652"
@@ -96,10 +96,7 @@
        width="8.4666662"
        height="8.4666662"
        preserveAspectRatio="none"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAUUlE
-QVRYCWNgGAWjITAaAgMcAozo9kdHR/9HF6Mmf+nSpSh2MlHT8FGzRkNgNATICQGUPAkyYLQcAIXC
-KB4NgREVAqPlwIiK7lHPjobA4AwBACAPDAoQLyJkAAAAAElFTkSuQmCC
-"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAUUlE QVRYCWNgGAWjITAaAgMcAozo9kdHR/9HF6Mmf+nSpSh2MlHT8FGzRkNgNATICQGUPAkyYLQcAIXC KB4NgREVAqPlwIiK7lHPjobA4AwBACAPDAoQLyJkAAAAAElFTkSuQmCC "
        id="image1684"
        x="8.7312508"
        y="6.0854173" />

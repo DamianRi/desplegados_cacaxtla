@@ -85,7 +85,6 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    filter: invert(80%);
 }
 @keyframes fadeInMenu {
     0% {

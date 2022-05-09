@@ -4,6 +4,10 @@
     height: 100%;
     overflow-y: scroll;
 }
+.use-license * {
+    color: #f2f2f2;
+}
+
 .use-license > p:not(.use-license__title) {
     line-height: 1.6;
     text-align: justify;
@@ -21,4 +25,5 @@
     margin: 1rem 0;
     padding: 1.6rem;
     border-left: 4px solid var(--bg-light);
+    color: var(--secondary);
 }
