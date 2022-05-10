@@ -78,8 +78,9 @@
 }
 .main-menu > picture > img {
     width: 100%;
-    max-width: 350px;
-    height: auto;
+    height: 100%;
+    max-width: 35rem;
+    max-height: 35rem;
 }
 .main-menu__item--close {
     position: absolute;
