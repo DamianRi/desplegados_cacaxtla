@@ -11,15 +11,6 @@
     <link rel="stylesheet" href="./css/desktop.css" media="only screen and (min-width: 992px)">
 </head>
 <body>
-    <div class="modal__background">
-        <section class="modal__notice">
-            <p class="modal__title">Licencia de uso</p>
-            <p class="modal__description">
-                Al ingresar a este sitio y consultar el material depositado en él, usted está aceptando las condiciones estipuladas en la <a class="use_license" href="views/use_license.html"><em>"LICENCIA DE USO"</em></a> del mismo, por lo que le invitamos a leer cuidadosamente el texto completo de la misma.
-            </p>
-            <button onclick="hideModal()">Entendido</button>
-        </section>
-    </div>
     <header>
         <div class="header-logos">
             <div class="unam">
@@ -68,7 +59,16 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="main-index">
+        <div class="modal__background">
+            <section class="modal__notice">
+                <p class="modal__title">Licencia de uso</p>
+                <p class="modal__description">
+                    Al ingresar a este sitio y consultar el material depositado en él, usted está aceptando las condiciones estipuladas en la <a class="use-license" href="views/use_license.html"><em>"LICENCIA DE USO"</em></a> del mismo, por lo que le invitamos a leer cuidadosamente el texto completo de la misma.
+                </p>
+                <button onclick="hideModal()">Entendido</button>
+            </section>
+        </div>
         <!-- Sección relacionada con el menú interactivo -->
         <p class="welcome">
             El presente recurso en línea complementa la información consignada en el catálogo electrónico de la pintura mural de Cacaxtla (Tomo I del Volumen V). Al igual que en la versión impresa, se presenta en forma de desplegados el trabajo de registro fotográfico y dibujo de los murales de La Batalla, del Templo Rojo, del Templo de Venus y del Edificio A.

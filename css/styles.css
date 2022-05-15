@@ -193,6 +193,9 @@ main {
     min-width: 320px;
     background-color: var(--primary);
 }
+main.main-index {
+    position: inherit;
+}
 /* Pie de página */
 footer {
     width: 100vw;
@@ -208,7 +211,7 @@ footer {
 
 footer p {
     display: inline;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 /* Para móviles de forma :horizontal */
 @media screen and (orientation: landscape) and (max-height: 600px) {
