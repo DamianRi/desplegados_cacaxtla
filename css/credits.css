@@ -6,7 +6,7 @@
     overflow-y: scroll;
 }
 .created_by * {
-    color: #f2f2f2;
+    color: #d9d9d9;
 }
 .created_by > h1 {
     font-size: 1.8rem;
