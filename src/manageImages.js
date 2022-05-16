@@ -309,6 +309,13 @@ function createSeadragonViewer(muralContentId, muralToolbarId, tiles, zoomLevel 
     removeAllChildren(divContent);
     let toolbar = document.getElementById(muralToolbarId);
     removeAllChildren(toolbar);
+    // Customize tooltip titles
+    OpenSeadragon.setString("Tooltips.Home", "Centrar Mural");
+    OpenSeadragon.setString("Tooltips.NextPage", "Mostrar dibujo a línea");
+    OpenSeadragon.setString("Tooltips.PreviousPage", "Mostrar fotografía");
+    OpenSeadragon.setString("Tooltips.FullPage", "Pantalla Completa");
+    OpenSeadragon.setString("Tooltips.ZoomIn", "Acercar imagen");
+    OpenSeadragon.setString("Tooltips.ZoomOut", "Alejar imagen");
     OpenSeadragon({
         id: muralContentId,
         prefixUrl: prefixURLIcons,
