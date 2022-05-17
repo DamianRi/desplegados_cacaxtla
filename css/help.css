@@ -21,23 +21,23 @@
     background-size: contain;
 }
 .nav-help__img.draw {
-    background-image: url('/img/icons/32/swap_to_line.svg');
+    background-image: url('../img/icons/32/swap_to_line.svg');
 }
 .nav-help__img.photo {
-    background-image: url('/img/icons/32/swap_to_color.svg');
+    background-image: url('../img/icons/32/swap_to_color.svg');
 }
 .nav-help__img.fullpage {
-    background-image: url('/img/icons/32/expand.svg');
+    background-image: url('../img/icons/32/expand.svg');
 }
 .nav-help__img.focuspage {
-    background-image: url('/img/icons/32/focus.svg');
+    background-image: url('../img/icons/32/focus.svg');
 }
 .nav-help__img.zoomin {
-    background-image: url('/img/icons/32/zoom_in.svg');
+    background-image: url('../img/icons/32/zoom_in.svg');
 }
 .nav-help__img.zoomout {
-    background-image: url('/img/icons/32/zoom_out.svg');
+    background-image: url('../img/icons/32/zoom_out.svg');
 }
 .nav-help__img.slider {
-    background-image: url('/img/icons/32/slider.png');
+    background-image: url('../img/icons/32/slider.png');
 }
