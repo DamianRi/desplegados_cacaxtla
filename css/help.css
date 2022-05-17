@@ -1,5 +1,7 @@
 .title {
-    padding: 1rem;
+    width: fit-content;
+    margin: auto;
+    padding: 1rem 0;
 }
 .nav-help {
     display: grid;
