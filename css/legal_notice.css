@@ -1,11 +1,11 @@
 .legal-notice {
-    padding: 1rem 2rem;
+    padding: 1rem 15rem;
     font-size: 1.4rem;
     height: 100%;
     overflow-y: auto;
 }
 .legal-notice * {
-    color: #d9d9d9;
+    color: #b2b2b2;
 }
 .legal-notice > p:not(.legal-notice__title) {
     line-height: 1.6;
@@ -20,11 +20,17 @@
 }
 .legal-notice__title {
     margin: 1.6rem 0;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 .legal-notice__footer > ul {
     font-style: normal;
     list-style: none;
     margin: 2rem 0 0 0;
+}
+
+@media screen and (max-width: 680px) {
+    .legal-notice {
+        padding: 1rem 2rem;
+    }
 }

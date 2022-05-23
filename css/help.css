@@ -1,7 +1,12 @@
+main {
+    color: #b2b2b2;
+}
 .title {
     width: fit-content;
     margin: auto;
     padding: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 .nav-help {
     display: grid;
