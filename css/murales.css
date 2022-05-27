@@ -180,6 +180,48 @@
 }
 /* Override toolbar styles with important property due to
 styles were write inline */
+.toolbarLabel {
+    display: inline-block;
+    position: absolute;
+    padding: 0.8rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+    background-color: var(--primary-dark);
+    border-top-left-radius: 9rem;
+    border-bottom-left-radius: 9rem;
+    z-index: -1;
+}
+.toolbarLabel.inactive {
+    width: max-content;
+    transform: translate(1rem);
+    transition-duration: 0.1s;
+}
+.toolbarLabel.active.zoom-in {
+    width: 13rem;
+    transform: translate(-14rem);
+    transition-duration: 0.1s;
+}
+.toolbarLabel.active.zoom-out,
+.toolbarLabel.active.center {
+    width: 10rem;
+    transform: translate(-13rem);
+    transition-duration: 0.1s;
+}
+.toolbarLabel.active.fullscreen {
+    width: 14rem;
+    transform: translate(-15.5rem);
+    transition-duration: 0.1s;
+}
+.toolbarLabel.active.swap-to-draw {
+    width: 16rem;
+    transform: translate(-17.5rem);
+    transition-duration: 0.1s;
+}
+.toolbarLabel.active.swap-to-image {
+    width: 14rem;
+    transform: translate(-15rem);
+    transition-duration: 0.1s;
+}
 div#mural-toolbar {
     position: absolute !important;
     margin: 1rem;

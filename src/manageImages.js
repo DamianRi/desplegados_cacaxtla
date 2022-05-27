@@ -310,12 +310,12 @@ function createSeadragonViewer(muralContentId, muralToolbarId, tiles, zoomLevel 
     let toolbar = document.getElementById(muralToolbarId);
     removeAllChildren(toolbar);
     // Customize tooltip titles
-    OpenSeadragon.setString("Tooltips.Home", "Centrar Mural");
-    OpenSeadragon.setString("Tooltips.NextPage", "Mostrar dibujo a línea");
-    OpenSeadragon.setString("Tooltips.PreviousPage", "Mostrar fotografía");
-    OpenSeadragon.setString("Tooltips.FullPage", "Pantalla Completa");
-    OpenSeadragon.setString("Tooltips.ZoomIn", "Acercar imagen");
-    OpenSeadragon.setString("Tooltips.ZoomOut", "Alejar imagen");
+    OpenSeadragon.setString("Tooltips.Home", "");
+    OpenSeadragon.setString("Tooltips.NextPage", "");
+    OpenSeadragon.setString("Tooltips.PreviousPage", "");
+    OpenSeadragon.setString("Tooltips.FullPage", "");
+    OpenSeadragon.setString("Tooltips.ZoomIn", "");
+    OpenSeadragon.setString("Tooltips.ZoomOut", "");
     OpenSeadragon({
         id: muralContentId,
         prefixUrl: prefixURLIcons,
@@ -328,6 +328,7 @@ function createSeadragonViewer(muralContentId, muralToolbarId, tiles, zoomLevel 
         preserveViewport: true,
         defaultZoomLevel: zoomLevel,
     });
+    modifyToolbar();
 }
 
 // Configurations to use the openseadragon
@@ -371,4 +372,109 @@ const navIcons = {
         HOVER:  'swap_to_line_hover.svg',
         DOWN:   'swap_to_line_pressed.svg'
     }
+}
+
+// Label for the toolbar
+const CENTER_LABEL = "Centrar mural";
+const SWAP_DRAW_LABEL = "Mostrar dibujo a línea";
+const SWAP_IMAGE_LABEL = "Mostrar fotografía";
+const FULLSCREEN_LABEL = "Pantalla Completa";
+const ZOOM_IN_LABEL = "Acercar imagen";
+const ZOOM_OUT_LABEL = "Alejar imagen";
+
+/**
+ * Makes the modifications to show the description of each button
+ * available in the toolbar buttons
+ */
+function modifyToolbar () {
+    let toolbar = document.getElementById("mural-toolbar");
+    if (toolbar.hasChildNodes()) {
+        let mainToolbar = toolbar.firstChild;
+        let mainToolbarChildren = mainToolbar.childNodes;
+        // the first child has the zoomIn, zoomOut, center, fullscreen buttons.
+        let zoomTools = mainToolbarChildren[0].firstChild.firstChild;
+        addLabelsIntoZoomTools(zoomTools);
+        // the third child has the swap buttons.
+        let swapTools = mainToolbarChildren[2].firstChild.firstChild;
+        addLabelsIntoSwapTools(swapTools);
+    }
+}
+
+/**
+ * Add the labels to the swap to image and swap to draw buttons
+ * into the toolbar
+ * @param {ChildNode} swapTools 
+ */
+function addLabelsIntoSwapTools (swapTools) {
+    // swap to image
+    let swapToImage = swapTools.firstChild;
+    let sImgProperties = {
+        message: SWAP_IMAGE_LABEL,
+        class: "swap-to-image"
+    }
+    createToolLabel(swapToImage, sImgProperties);
+    // swap to draw
+    let swapToLine = swapTools.childNodes[1];
+    let sDrawProperties = {
+        message: SWAP_DRAW_LABEL,
+        class: "swap-to-draw"
+    }
+    createToolLabel(swapToLine, sDrawProperties);
+}
+
+/**
+ * Add the labels to the zoom in, zoom out, center and fullscreen buttons
+ * into the toolbar
+ * @param {ChildNode} zoomTools 
+ */
+function addLabelsIntoZoomTools (zoomTools) {
+    // zoomInLabel
+    let zoomIn = zoomTools.firstChild;
+    let zoomInProperties = {
+        message: ZOOM_IN_LABEL,
+        class: "zoom-in"
+    };
+    createToolLabel(zoomIn, zoomInProperties);
+    // zoomOutLabel
+    let zoomOut = zoomTools.childNodes[1];
+    let zoomOutProperties = {
+        message: ZOOM_OUT_LABEL,
+        class: "zoom-out"
+    };
+    createToolLabel(zoomOut, zoomOutProperties);
+    // centerMural
+    let centerMural = zoomTools.childNodes[2];
+    let centerMuralProperties = {
+        message: CENTER_LABEL,
+        class: "center"
+    };
+    createToolLabel(centerMural, centerMuralProperties);
+    // fullscreenLabel
+    let fullScreen = zoomTools.childNodes[3];
+    let fullscreenProperties = {
+        message: FULLSCREEN_LABEL,
+        class: "fullscreen"
+    };
+    createToolLabel(fullScreen, fullscreenProperties);
+}
+
+/**
+ * Create a <p> element with a message as content and this
+ * is added as a chil of the tool ChildNode
+ * @param {ChilNode} tool 
+ * @param {Object} properties 
+ */
+function createToolLabel (tool, properties) {
+    let label = document.createElement("p");
+    label.innerText = properties.message;
+    label.classList.add("toolbarLabel", "inactive", properties.class);
+    tool.appendChild(label);
+    tool.addEventListener("mouseenter", function(event) {
+        label.classList.remove("inactive");
+        label.classList.add("active");
+        setTimeout(() => {
+            label.classList.remove("active");
+            label.classList.add("inactive");                
+        }, 1500);
+    });
 }

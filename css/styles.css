@@ -12,6 +12,7 @@ html {
 :root {
     --primary: #202020;
     --primary-soft: #202020cc;
+    --primary-dark: #191919;
     --secondary: #00d2fc;
     --secondary-dark: #005d6f;
     --secondary-light: #76e8ff;
