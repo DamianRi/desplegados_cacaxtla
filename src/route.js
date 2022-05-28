@@ -4,6 +4,3 @@ function redirectToMurals(section) {
     params.append("section", section)
     window.location.href = "views/murales.html?" + params.toString();
 }
-function redirectToHome() {
-    window.location.href = "../index.html";
-}

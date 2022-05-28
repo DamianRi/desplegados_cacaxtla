@@ -63,6 +63,10 @@
     background-color: var(--secondary);
     color: var(--font-color-dark);
 }
+.mural-section.short:hover {
+    background-color: #0099b8;
+    color: #dbf6fb;
+}
 .mural-section.short > .mural-title-section.small {
     font-size: 1rem;
 }
@@ -80,10 +84,13 @@
     right: 2rem;
     width: 1.4rem;
     height: 1.4rem;
-    background-image: url("../img/icons/32/down.svg");
+    background-image: url("../img/icons/32/down_dark.svg");
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.mural-section.short:hover > span {
+    background-image: url("../img/icons/32/down_light.svg");
 }
 @keyframes fadeInAnimation {
     0% {
@@ -304,7 +311,7 @@ div#mural-toolbar.mural-toolbar>div>div {
          }
     }
     .mural-section.short {
-        padding: 0.2rem 0.4rem 2.5rem 0.4rem;
+        padding: 0.2rem 0.4rem 3.5rem 0.4rem;
         height: 100%;
         width: var(--mural-section-short);
         font-size: 1.2rem;
@@ -313,11 +320,11 @@ div#mural-toolbar.mural-toolbar>div>div {
         text-align: right;
     }
     .mural-section.short > span {
-        top: auto;
+        top: 95%;
         right: 0;
         bottom: 0;
-        transform: rotate(90deg);
         margin: 0.75rem;
+        transform: rotate(90deg);
     }
     .mural-section.long {
         position: absolute;
@@ -482,7 +489,7 @@ div#mural-toolbar.mural-toolbar>div>div {
          }
     }
     .mural-section.short {
-        padding: 0.2rem 0.4rem 2.5rem 0.4rem;
+        padding: 0.2rem 0.4rem 3.5rem 0.4rem;
         height: 80vh;
         width: var(--mural-section-short);
         font-size: 1.4rem;
@@ -491,7 +498,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         text-align: right;
     }
     .mural-section.short > span {
-        top: auto;
+        top: 95%;
         right: 0;
         bottom: 0;
         margin: 0.5rem 1rem;

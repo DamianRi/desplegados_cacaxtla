@@ -21,10 +21,10 @@
     font-size: 1.8rem;
 }
 .quote {
-    font-style: italic;
+    font-style: normal;
     margin: 1rem 0;
     padding: 1.6rem;
-    border-left: 4px solid var(--bg-light);
+    border-left: 2px dotted var(--bg-light);
     color: var(--secondary);
 }
 

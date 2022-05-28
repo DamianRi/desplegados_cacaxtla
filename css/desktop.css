@@ -1,14 +1,3 @@
-.header-logos {
-    height: 6rem;
-}
-.header-logos div > a > img {
-    height: 100%;
-    width: auto;
-}
-.header-logos div > a > picture > img {
-    width: auto;
-    height: 100%;
-}
 .fadeInMenu {
     animation-duration: 0.4s;
 }
