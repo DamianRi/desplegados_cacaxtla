@@ -1,11 +1,13 @@
 
 window.addEventListener("load", function() {
-    noDownload();
+    setTimeout(() => {
+        noDownload();
+    }, 2000);
 });
 
 
 function noDownload() {
-    let allImages = document.querySelectorAll("img.no-download");
+    let allImages = document.querySelectorAll(".no-download");
     for (const image of allImages) {
         image.addEventListener("contextmenu", function(e){
             e.preventDefault();

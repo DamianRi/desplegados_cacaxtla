@@ -14,9 +14,15 @@ const MURAL_DISPLACEMENT = [
     "escalera",
     "pilares"
 ];
-const WIDTH_DESKTOP = 768;
 const main = document.getElementsByTagName("main")[0];
 main.onload = loadContent();
+
+/** @returns true if the browser is from a mobile device */
+function isMobileDevice() {
+    let details = navigator.userAgent;
+    let regexp = /android|iphone|kindle|ipad/i;
+    return regexp.test(details);
+}
 
 /**
  * Reads the database json and the load the mural info in the main section
@@ -45,10 +51,10 @@ function loadMural(indexSection, indexMural, reloadSlide) {
     let mural = getMural(indexSection, indexMural);
     IMAGE_TILES = mural['source-image'];
     LINE_TILES = mural['source-line'];
-    if (main.offsetWidth >= WIDTH_DESKTOP) {
-        IMAGE_LOCATION = '../img/isometricos/desktop/' + mural['source-isometric'];
-    } else {
+    if (isMobileDevice()) {
         IMAGE_LOCATION = '../img/isometricos/mobile/' + mural['source-isometric'];
+    } else {
+        IMAGE_LOCATION = '../img/isometricos/desktop/' + mural['source-isometric'];
     }
     WIDTH = mural['width'];
     HEIGHT = mural['height'];
@@ -469,12 +475,14 @@ function createToolLabel (tool, properties) {
     label.innerText = properties.message;
     label.classList.add("toolbarLabel", "inactive", properties.class);
     tool.appendChild(label);
-    tool.addEventListener("mouseenter", function(event) {
-        label.classList.remove("inactive");
-        label.classList.add("active");
-        setTimeout(() => {
-            label.classList.remove("active");
-            label.classList.add("inactive");                
-        }, 1500);
-    });
+    if (!isMobileDevice()) {
+        tool.addEventListener("mouseenter", function(event) {
+            label.classList.remove("inactive");
+            label.classList.add("active");
+            setTimeout(() => {
+                label.classList.remove("active");
+                label.classList.add("inactive");                
+            }, 1500);
+        });
+    }
 }
