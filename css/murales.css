@@ -199,9 +199,7 @@ styles were write inline */
     z-index: -1;
 }
 .toolbarLabel.inactive {
-    width: max-content;
-    transform: translate(1rem);
-    transition-duration: 0.1s;
+    display: none;
 }
 .toolbarLabel.active.zoom-in {
     width: 13rem;
