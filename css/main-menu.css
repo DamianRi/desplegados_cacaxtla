@@ -49,7 +49,8 @@
     background-color: var(--secondary);
 }
 .modal__notice > button:active {
-    background-color: var(--secondary-dark);
+    background-color: var(--secondary-dark-hover);
+    color: var(--font-color-light-hover);
 }
 .welcome-section {
     position: absolute;

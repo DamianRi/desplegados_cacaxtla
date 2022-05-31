@@ -27,15 +27,15 @@
      inkscape:document-units="mm"
      showgrid="true"
      units="px"
-     inkscape:zoom="12.047581"
-     inkscape:cx="4.4407257"
-     inkscape:cy="27.017873"
+     inkscape:zoom="29.93471"
+     inkscape:cx="13.763287"
+     inkscape:cy="13.045057"
      inkscape:window-width="1920"
-     inkscape:window-height="1057"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="29"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g5364">
+     inkscape:current-layer="layer2">
     <inkscape:grid
        type="xygrid"
        id="grid9"
@@ -59,7 +59,7 @@
      inkscape:label="Capa 3"
      style="display:inline">
     <ellipse
-       style="fill:#0088a3;fill-opacity:1;stroke-width:0.264583"
+       style="fill:#0099b8;fill-opacity:1;stroke-width:0.264583"
        id="path993"
        cx="4.2333331"
        cy="4.2333331"
@@ -77,7 +77,7 @@
       <g
          id="g5364">
         <rect
-           style="display:inline;fill:none;fill-opacity:1;stroke:#333333;stroke-width:0.449792;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:20;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+           style="display:inline;fill:none;fill-opacity:1;stroke:#dbf6fb;stroke-width:0.449792;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:20;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
            id="rect4704-4"
            width="3.9026041"
            height="3.9026043"
@@ -85,7 +85,7 @@
            y="3.2411461"
            ry="0.5291667" />
         <rect
-           style="display:inline;fill:#0088a3;fill-opacity:1;stroke:#0088a3;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="display:inline;fill:#0099b8;fill-opacity:1;stroke:#0099b8;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect1109-9"
            width="4.1010423"
            height="4.1671872"
@@ -94,11 +94,11 @@
            ry="0.52916664" />
       </g>
       <path
-         style="fill:none;stroke:#333333;stroke-width:0.396875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#dbf6fb;stroke-width:0.396875;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 0.66145832,5.1593749 V 7.0776041 H 2.9765625 L 2.3151042,6.4161458 2.9765625,7.0776041 2.3151042,7.8052082 v 0"
          id="path5399" />
       <rect
-         style="fill:#333333;fill-opacity:1;stroke:#333333;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#dbf6fb;fill-opacity:1;stroke:#dbf6fb;stroke-width:0.1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect1109"
          height="4.1671872"
          x="1.2567708"

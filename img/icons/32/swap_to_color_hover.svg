@@ -28,14 +28,14 @@
      showgrid="true"
      units="px"
      inkscape:zoom="16"
-     inkscape:cx="17.96875"
-     inkscape:cy="21.90625"
+     inkscape:cx="18"
+     inkscape:cy="21.78125"
      inkscape:window-width="1920"
-     inkscape:window-height="1057"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="29"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2">
+     inkscape:current-layer="layer6">
     <inkscape:grid
        type="xygrid"
        id="grid9"
@@ -59,7 +59,7 @@
      inkscape:label="Capa 3"
      style="display:inline">
     <circle
-       style="fill:#00accd;fill-opacity:1;stroke-width:0.264583"
+       style="fill:#00d2fc;fill-opacity:1;stroke-width:0.264583"
        id="path993"
        cx="4.2333331"
        cy="4.2333331"
@@ -103,14 +103,14 @@
        inkscape:label="Layer 2"
        style="display:inline">
       <rect
-         style="display:inline;fill:#00accd;fill-opacity:1;stroke:#333333;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="display:inline;fill:#00d2fc;fill-opacity:1;stroke:#333333;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect1109-9"
-         width="4.1010423"
          height="4.1671872"
          x="1.5218827"
          y="1.0435526"
          ry="0.74180675"
-         transform="matrix(0.76899429,0,0,0.77242024,0.96766959,0.93605649)" />
+         transform="matrix(0.76899429,0,0,0.77242024,0.96766959,0.93605649)"
+         width="4.1014609" />
     </g>
     <g
        inkscape:groupmode="layer"

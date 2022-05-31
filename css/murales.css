@@ -64,8 +64,8 @@
     color: var(--font-color-dark);
 }
 .mural-section.short:hover {
-    background-color: #0099b8;
-    color: #dbf6fb;
+    background-color: var(--secondary-dark-hover);
+    color: var(--font-color-light-hover);
 }
 .mural-section.short > .mural-title-section.small {
     font-size: 1rem;
@@ -187,6 +187,9 @@
 }
 /* Override toolbar styles with important property due to
 styles were write inline */
+.navigator {
+    background-color: var(--primary) !important;
+}
 .toolbarLabel {
     display: inline-block;
     position: absolute;
@@ -208,13 +211,8 @@ styles were write inline */
 }
 .toolbarLabel.active.zoom-out,
 .toolbarLabel.active.center {
-    width: 10rem;
+    width: 12rem;
     transform: translate(-13rem);
-    transition-duration: 0.1s;
-}
-.toolbarLabel.active.fullscreen {
-    width: 14rem;
-    transform: translate(-15.5rem);
     transition-duration: 0.1s;
 }
 .toolbarLabel.active.swap-to-draw {
@@ -222,9 +220,10 @@ styles were write inline */
     transform: translate(-17.5rem);
     transition-duration: 0.1s;
 }
+.toolbarLabel.active.fullscreen,
 .toolbarLabel.active.swap-to-image {
     width: 14rem;
-    transform: translate(-15rem);
+    transform: translate(-15.5rem);
     transition-duration: 0.1s;
 }
 div#mural-toolbar {
