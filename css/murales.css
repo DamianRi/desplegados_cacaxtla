@@ -67,10 +67,10 @@
     background-color: var(--secondary-dark-hover);
     color: var(--font-color-light-hover);
 }
-.mural-section.short > .mural-title-section.small {
+.mural-section.short > div > .mural-title-section.small {
     font-size: 1rem;
 }
-.mural-section.short > .mural-title {
+.mural-section.short > div > .mural-title {
     font-weight: bold;
 }
 .mural-section.short.inactive {
@@ -79,11 +79,11 @@
 .mural-section.short > span {
     display: inline-block;
     position: absolute;
-    margin: 0.5rem 0;
+    margin: 0.5rem;
     top: 2px;
     right: 2rem;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.8rem;
+    height: 1.8rem;
     background-image: url("../img/icons/32/down_dark.svg");
     background-position: bottom;
     background-size: cover;
@@ -308,7 +308,7 @@ div#mural-toolbar.mural-toolbar>div>div {
          }
     }
     .mural-section.short {
-        padding: 0.2rem 0.4rem 3.5rem 0.4rem;
+        padding: 3.5rem 0.2rem;
         height: 100%;
         width: var(--mural-section-short);
         font-size: 1.2rem;
@@ -317,7 +317,7 @@ div#mural-toolbar.mural-toolbar>div>div {
         text-align: right;
     }
     .mural-section.short > span {
-        top: 95%;
+        top: calc(100% - 3.6rem);
         right: 0;
         bottom: 0;
         margin: 0.75rem;
@@ -400,16 +400,12 @@ div#mural-toolbar.mural-toolbar>div>div {
         font-size: 1.4rem;
         padding: 0 0 2rem 0;
     }
-    .mural-section.short > .mural-title-section.small{
+    .mural-section.short > div > .mural-title-section.small{
         font-size: 1.2rem;
     }
-    .mural-section.short > .mural-title-section, .mural-title {
+    .mural-section.short > div > .mural-title-section,
+    .mural-title {
         padding: 0;
-    }
-    .mural-section.short > span {
-        width: 2rem;
-        height: 2rem;
-        margin: 0.5rem;
     }
     .mural-section.long{
         height: 80vh;
@@ -495,10 +491,10 @@ div#mural-toolbar.mural-toolbar>div>div {
         text-align: right;
     }
     .mural-section.short > span {
-        top: 95%;
+        top: calc(100% - 3.6rem);
         right: 0;
         bottom: 0;
-        margin: 0.5rem 1rem;
+        margin: 1rem;
         transform: rotate(90deg);
     }
     .mural-section.long {
