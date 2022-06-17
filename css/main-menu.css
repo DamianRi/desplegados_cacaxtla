@@ -201,6 +201,7 @@
 @media screen and (min-width: 600px) and (min-height: 600px){
     .welcome {
         font-size: 1.4rem;
+        line-height: 1.6;
     }
     .main-menu__item--close {
         width: 2.8rem;
