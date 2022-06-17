@@ -55,18 +55,17 @@
 .welcome-section {
     position: absolute;
     width: 100%;
+    z-index: 2;
 }
 .welcome {
     display: block;
     margin: auto;
     min-width: 32rem;
-    max-width: 45rem;
+    max-width: 55rem;
     height: fit-content;
     padding: 1rem;
     font-size: 1.1rem;
-    z-index: 3;
     color: #b2b2b2;
-    z-index: 2;
 }
 .welcome > a {
     width: fit-content;
@@ -200,6 +199,9 @@
     display: none;
 }
 @media screen and (min-width: 600px) and (min-height: 600px){
+    .welcome {
+        font-size: 1.4rem;
+    }
     .main-menu__item--close {
         width: 2.8rem;
         height: 3.9rem;
